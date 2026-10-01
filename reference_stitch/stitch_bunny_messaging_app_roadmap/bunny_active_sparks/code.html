@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#a7391e", "surface-container": "#efecff", "surface-bright": "#fcf8ff", "on-error": "#ffffff", "surface-dim": "#dad8ef", "surface-container-low": "#f5f2ff", "tertiary-fixed-dim": "#4edea3", "inverse-on-surface": "#f2efff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#862208", "on-tertiary-container": "#00412b", "inverse-surface": "#2f2f41", "on-secondary": "#ffffff", "on-surface-variant": "#58423c", "primary-fixed": "#ffdad2", "on-primary-container": "#701500", "outline-variant": "#dfc0b8", "surface": "#fcf8ff", "surface-container-high": "#e8e6fe", "tertiary-container": "#0cb880", "on-secondary-container": "#fffbff", "background": "#fcf8ff", "error-container": "#ffdad6", "surface-variant": "#e3e0f8", "tertiary-fixed": "#6ffbbe", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-container": "#ff7a59", "on-tertiary-fixed": "#002113", "on-background": "#1a1a2b", "primary-fixed-dim": "#ffb4a2", "on-secondary-fixed": "#1c0062", "surface-container-highest": "#e3e0f8", "inverse-primary": "#ffb4a2", "secondary-container": "#7857f8", "secondary": "#5f3add", "primary": "#a7391e", "on-secondary-fixed-variant": "#4918c8", "on-tertiary-fixed-variant": "#005236", "secondary-fixed": "#e6deff", "on-error-container": "#93000a", "on-surface": "#1a1a2b", "tertiary": "#006c49", "outline": "#8b716b", "error": "#ba1a1a", "on-primary-fixed": "#3c0700", "secondary-fixed-dim": "#cabeff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter": "1rem", "gutter-mobile": "0.75rem", "space-md": "0.875rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-lg": "1.25rem", "margin": "1.25rem", "space-sm": "0.5rem", "margin-mobile": "1rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "800" }], "body-md": ["15px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back to Chats" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface bg-surface-container-lowest/80 active:scale-95 transition-transform shadow-[0_2px_8px_rgba(30,30,47,0.04)]" onclick="window.location.hash='chats'||history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Active Sparks</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Search Sparks" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface bg-surface-container-lowest/80 active:scale-95 transition-transform shadow-[0_2px_8px_rgba(30,30,47,0.04)]"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Post a Spark" class="w-11 h-11 flex items-center justify-center rounded-full text-on-primary bg-primary-container active:scale-95 transition-transform shadow-[0_4px_14px_rgba(255,122,89,0.35)]"><span class="material-symbols-outlined text-[22px]">photo_camera</span></button></div></div></header><main class="flex-1 w-full bg-background px-gutter pt-16 pb-safe"><div class="flex flex-col w-full pb-24">
+<!-- Interactive Pill Filter Row -->
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar py-space-sm -mx-gutter px-gutter">
+<button class="filter-chip active flex-shrink-0 px-space-md py-1.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-[0_4px_12px_rgba(95,58,221,0.25)] transition-all active:scale-95 flex items-center gap-1.5" onclick="setFilter(this, 'all')">
+<span>All Sparks</span>
+<span class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center font-label-sm text-label-sm">14</span>
+</button>
+<button class="filter-chip flex-shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_rgba(30,30,47,0.04)] transition-all active:scale-95 flex items-center gap-1.5" onclick="setFilter(this, 'close')">
+<span>Close Friends</span>
+<span class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm">4</span>
+</button>
+<button class="filter-chip flex-shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_rgba(30,30,47,0.04)] transition-all active:scale-95 flex items-center gap-1.5" onclick="setFilter(this, 'music')">
+<span class="material-symbols-outlined text-[16px] text-secondary">headphones</span>
+<span>Listening (3)</span>
+</button>
+<button class="filter-chip flex-shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_rgba(30,30,47,0.04)] transition-all active:scale-95 flex items-center gap-1.5" onclick="setFilter(this, 'gaming')">
+<span class="material-symbols-outlined text-[16px] text-tertiary">sports_esports</span>
+<span>Gaming (2)</span>
+</button>
+<button class="filter-chip flex-shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_rgba(30,30,47,0.04)] transition-all active:scale-95 flex items-center gap-1.5" onclick="setFilter(this, 'nearby')">
+<span class="material-symbols-outlined text-[16px] text-primary-container">near_me</span>
+<span>Around You (5)</span>
+</button>
+</div>
+<!-- Your Spark Creator Card -->
+<div class="mt-space-sm w-full bg-surface-container-lowest rounded-lg p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.05)] relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 w-36 h-36 rounded-full bg-gradient-to-tr from-primary-fixed/30 to-secondary-fixed/40 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between gap-space-sm relative z-10">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full p-0.5 bg-gradient-to-tr from-primary-container via-secondary to-tertiary-container">
+<img class="w-full h-full rounded-full object-cover" data-alt="Warm aesthetic portrait of Maya Lin, a trendy young creative smiling gently, soft indoor studio lighting with peachy glow, modern warm avatar photograph" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc5_9dWThydH7O1E6DC5-fvI85Zgt0Wur0w6Wa9n68PtEHw2F_Epky0tlqaZ3tXIpUYAL5xS8SrLW8TeNynFx9B_0KIOxxbkxLISAwPn2LqAgSGhBK5O_di0lnvZxtHj9kJD2YL7BIRcFhlbdGfurU9AmGwliRbiMPTRu41IbbwS40Cga7pVyEUXnpBPI3dM1WWjwhCgjF3zdaXN0O-UimsKF8CJSgzytezQWFm1GSpP0M2nzWu_So"/>
+</div>
+<button class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Your Spark</h2>
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Expires in 18h • 32 views</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="Add Text Spark" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-secondary active:scale-95 transition-transform" onclick="triggerToast('Opening text canvas ✨')">
+<span class="material-symbols-outlined text-[18px]">title</span>
+</button>
+<button aria-label="Snap Photo Spark" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-95 transition-transform" onclick="triggerToast('Opening camera 📸')">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</button>
+<button aria-label="Share Music Tune" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-tertiary active:scale-95 transition-transform" onclick="triggerToast('Pick a track 🎵')">
+<span class="material-symbols-outlined text-[18px]">music_note</span>
+</button>
+</div>
+</div>
+<!-- Active Spark Mini Carousel/Preview Bar -->
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="flex -space-x-1.5">
+<div class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center font-label-sm text-[10px]">LC</div>
+<div class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-[10px]">SM</div>
+<div class="w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center font-label-sm text-[10px]">NV</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Liam, Sophie &amp; 30 others reacted</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary font-bold hover:underline" onclick="triggerToast('Opening story insights 📊')">Insights</button>
+</div>
+</div>
+<!-- Live Sparks Header & Quick Meta -->
+<div class="flex items-center justify-between mt-space-lg mb-space-sm px-1">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Sparks</h3>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">Live Feed</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tap to view</span>
+</div>
+<!-- 2-Column Sparks Dynamic Grid -->
+<div class="grid grid-cols-2 gap-space-sm" id="sparks-container">
+<!-- Card 1: Liam Chen (Lo-fi Beats) -->
+<div class="spark-card relative rounded-lg overflow-hidden bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] group flex flex-col justify-between aspect-[9/14] cursor-pointer" onclick="openSparkModal('Liam Chen', 'Late Night Lo-fi Beats', '🎧 Late Night Lo-fi', '12m ago')">
+<!-- Background Visual -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Moody cinematic dusk view inside an urban high-rise apartment bedroom with neon purple ambient strip lighting, music synthesizer with glowing LED knobs, and headphones resting on the desk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAi9hqlOa0kNZG0eYHkWPKXdbpK8-a_B48DEYWZXZVpn1p_Xj0af-xdCtbfCNQxdW1CgTqnYzutjZp6nzjz5uPYdWyr7RBbXi1UygrUFvq3gvdfBAJj47OyNBBLrPZbgyt2tjkLcPaQFlmOKEQx5nKCVc-ut_7AorZqKk6RfrIei3KnQrLmQTOUAdewKQ-FdYBBVI-WPFRHF-K8AtFmAhB7U4el5DK5RD6Bfnob8X4B3BQ0yeQyDrhJ')"></div>
+<!-- Gradient Overlays for contrast -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/85"></div>
+<!-- Top Header / Friend info -->
+<div class="relative z-10 p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-8 h-8 rounded-full p-0.5 bg-gradient-to-tr from-primary-container to-secondary flex-shrink-0">
+<img class="w-full h-full rounded-full object-cover" data-alt="Portrait of Liam Chen with trendy hair wearing black hoodie and silver chain, soft aesthetic warm social profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDpkyjlLfsGEz1RNzM4zNvlobesR0PbCQkUjNhtps10DxKycxcKtmZF_hvKA7R62y6nOgDnWKMu8VloVDgX0lQDOFSuvbmY4EGW7SyLFepwV6gWQDILF692m5BIojON6oM-9Ng1ePlVNbsWej07ylqTCBoPBE9MBK9wRz_4vEzoAEU-F1uEOEgCdQfMr2kTWuCiGfFX3lTV6PfP-uhAlupMf7rQFYOdL6_jR-a2-fnAOZjwvUqyHzi"/>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-white font-bold truncate drop-shadow-sm">Liam Chen</p>
+<p class="font-label-sm text-label-sm text-white/80 drop-shadow-sm">12m ago</p>
+</div>
+</div>
+<!-- Unread Ring Marker -->
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_#ff7a59]"></span>
+</div>
+<!-- Bottom Meta & Dynamic Badge -->
+<div class="relative z-10 p-space-sm flex flex-col gap-1.5">
+<!-- Visualizer Tag -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-white font-label-sm text-label-sm w-fit max-w-full">
+<div class="flex items-end gap-0.5 h-3">
+<span class="w-0.5 h-3 bg-tertiary-fixed rounded-full animate-bounce"></span>
+<span class="w-0.5 h-2 bg-tertiary-fixed rounded-full animate-pulse"></span>
+<span class="w-0.5 h-3.5 bg-tertiary-fixed rounded-full animate-bounce"></span>
+</div>
+<span class="truncate">Late Night Lo-fi</span>
+</div>
+<div class="flex items-center justify-between mt-0.5">
+<p class="font-body-sm text-body-sm text-white font-medium line-clamp-1">Playing beats on loop 🎧</p>
+<button aria-label="React with Heart" class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white hover:text-primary-container flex items-center justify-center active:scale-125 transition-transform" onclick="event.stopPropagation(); reactSpark(this)">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Sophie Martin (Café Soho) -->
+<div class="spark-card relative rounded-lg overflow-hidden bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] group flex flex-col justify-between aspect-[9/14] cursor-pointer" onclick="openSparkModal('Sophie Martin', 'Café hopping in Soho', '☕️ Soho, NY', '45m ago')">
+<!-- Background Visual -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Aesthetic aesthetic flatlay on a marble café table in Soho NYC, beautiful warm oat milk cappuccino with floral latte art, fresh croissant, and sunbeams dancing across the surface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCp9qo8QURQO_uZUgWsEPWGN3_llIpiJHBLt-siboro_jFkhDRQR5LygKMrmBeRsf4WI_d_gE9O2_QW0r7SlsOyolEzUTb5fwNZ7eTIErGw7lQ6pzwnUl8Bu0cpHDa8gAy9zerKSFZZw2omPUKBJ92IBnHuzAIvI88iTf3UnlszXo_eeVcJB_0eFzktI0mT-6FUd5h_hFmVa_-DW7DpJ48Hc7yFbJtzARZuf8w1KGvIxAeT59YM6QX')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/85"></div>
+<div class="relative z-10 p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-8 h-8 rounded-full p-0.5 bg-gradient-to-tr from-primary-container to-secondary flex-shrink-0">
+<img class="w-full h-full rounded-full object-cover" data-alt="Warm friendly avatar portrait of Sophie Martin in chic knit sweater with French beret, soft golden outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT5FXLXF8-UN3w3o3gPJbaTisoT93wzkpHy6SjUmL5KMifpVAYAMiKH0cZa4TmlfC_n8EtdBQbO1EdOy62U1MZ6-OSMFJY6WLkuoVMp-5fmNdDoPwAzU1wIN8h6NHzQC8GoFMcEH19LFajBB3aZelDKr8aGK34-TlN_ZXeSODchtor6GW9iBtx6cfkof9XX45anFw_VH3ZpbCufGs1YeUEtO5lzVBZwDZGQYz35MkLusrkLcpYtHpm"/>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-white font-bold truncate drop-shadow-sm">Sophie M.</p>
+<p class="font-label-sm text-label-sm text-white/80 drop-shadow-sm">45m ago</p>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_#ff7a59]"></span>
+</div>
+<div class="relative z-10 p-space-sm flex flex-col gap-1.5">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-white font-label-sm text-label-sm w-fit max-w-full">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed">location_on</span>
+<span class="truncate">Soho, NY</span>
+</div>
+<div class="flex items-center justify-between mt-0.5">
+<p class="font-body-sm text-body-sm text-white font-medium line-clamp-1">Café hopping ✨☕️</p>
+<button aria-label="React with Spark" class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white hover:text-primary-container flex items-center justify-center active:scale-125 transition-transform" onclick="event.stopPropagation(); reactSpark(this)">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Noah Vance (Live Apex Legends) -->
+<div class="spark-card relative rounded-lg overflow-hidden bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] group flex flex-col justify-between aspect-[9/14] cursor-pointer" onclick="openSparkModal('Noah Vance', 'Apex Legends Tournament Finals', '🎮 Streaming Live', '1h ago')">
+<!-- Background Visual -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Vibrant esports gaming battlestation setup with dual curved ultrawide monitors showing competitive futuristic sci-fi game, glowing purple and teal RGB backlighting and pro mechanical keyboard" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAS29s-VAavwhsxwv0iuh8zff55uncl8N038Fn2FKBmHtilQPOplKSZd8Dd9GmbQ94OK0KZpXnbU_cEadYuISKN3sPZpfW0WWDAe0qriIDX2qd7ZTvn35Y_Mo4yT0WNAnT7cjCqn1Q3cu9-yKwoytx7IzXiY9pVMiNU3Joc29IyJnAWs4xPxPTjkXK6K0dRxMPAhuSD-y9MnRxvllc2-adg8iGOS7FAP98TMibwIgGTuLDZBh0ApzU')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/85"></div>
+<div class="relative z-10 p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-8 h-8 rounded-full p-0.5 bg-gradient-to-tr from-secondary to-tertiary flex-shrink-0">
+<img class="w-full h-full rounded-full object-cover" data-alt="Stylized portrait of Noah Vance wearing gaming headset with microphone, lit with cool cyan and warm amber side lamps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz60ED8lAPoR2Msn9c_jiqCeKCAXFAxI2sSJwL2UQUw5oxccI9M8-VNLcfp2vVRhztoPJVzf1VkbEji2NOv0BZqPbGdMsEJdKTpKucCYk5nNkrUO-cPV8XKdiVklPM1byaDZrlU9jwERL-PH3_bXlC0MUvGQME7-6Y9FXiNp1JJh_iEwF0UaEcmDK7qsmNhEhM3dwnKXvUR5Rm3zufejRFise_jt-f13oGTLwCy9zwuBuqRTf__uCQ"/>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-white font-bold truncate drop-shadow-sm">Noah Vance</p>
+<p class="font-label-sm text-label-sm text-white/80 drop-shadow-sm">1h ago</p>
+</div>
+</div>
+<!-- Live Pill Badge -->
+<span class="px-1.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-[10px] tracking-wide uppercase flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+          LIVE
+        </span>
+</div>
+<div class="relative z-10 p-space-sm flex flex-col gap-1.5">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/90 backdrop-blur-md text-on-secondary font-label-sm text-label-sm w-fit max-w-full">
+<span class="material-symbols-outlined text-[14px]">sports_esports</span>
+<span class="truncate">Apex Finals</span>
+</div>
+<div class="flex items-center justify-between mt-0.5">
+<p class="font-body-sm text-body-sm text-white font-medium line-clamp-1">Tournament round 4! 🏆</p>
+<button aria-label="React with Spark" class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white hover:text-primary-container flex items-center justify-center active:scale-125 transition-transform" onclick="event.stopPropagation(); reactSpark(this)">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Chloe Bennett (Sunset Bike Ride) -->
+<div class="spark-card relative rounded-lg overflow-hidden bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] group flex flex-col justify-between aspect-[9/14] cursor-pointer" onclick="openSparkModal('Chloe Bennett', 'Sunset ride over the bridge', '🚲 Golden Hour', '2h ago')">
+<!-- Background Visual -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Breathtaking golden hour photography from a suspension bridge bike lane, vintage road bicycle leaning on railing with warm orange sunset reflection glowing across tranquil ocean bay water" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD9S_3FVEB1mYUTzn6KoFB_IwnMo1ZmfBr75aHwKeIgOLytm5hXC09s_vxEA9Raibd_wWZIvpq2aRbEJy1jPOGJ-zTf0Z7ee5M0scKsjw-BYyG4dNbO3bgNh0M0r-w0YoKB7gCaYQNDuBcK0uTlTJW78hT-ldLj6X0GODcyYPwNmKYFdDu2LxlUvfXckHCnngGGj5uG4DWqcZmQmOGVz_qJcVSjU1cFitg0t1MrPQYF9YeQTRIuo0I8')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/85"></div>
+<div class="relative z-10 p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-8 h-8 rounded-full p-0.5 bg-gradient-to-tr from-primary-container to-secondary flex-shrink-0">
+<img class="w-full h-full rounded-full object-cover" data-alt="Smiling portrait of Chloe Bennett outdoors with windswept curly hair, warm sunflare and natural radiant skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjM5eA2Q3DsC6uNr-epLY0ar-v4F9SbnJOFIa4MtKt3NBoNgmoIpwPBoLtPJfPg6Qn0pUG3NFFH6nE_aGq0hUZY0_rPO7J9UqmEQfLrRP8cLGolWNLGcLghe2wZZ85PSFQHsylGSRONhihhTNOq52fqBAqHabJD2KdZcSyD-wlelqq0Y6QtCoEzKT04_zLYwpVb4cyk9b9BfSZEWGdSXTcAM8O1e_cGZ8G6RbtYa2Rf9rLIKXAH5sZ"/>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-white font-bold truncate drop-shadow-sm">Chloe B.</p>
+<p class="font-label-sm text-label-sm text-white/80 drop-shadow-sm">2h ago</p>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_#ff7a59]"></span>
+</div>
+<div class="relative z-10 p-space-sm flex flex-col gap-1.5">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-white font-label-sm text-label-sm w-fit max-w-full">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">wb_sunny</span>
+<span class="truncate">Golden Hour</span>
+</div>
+<div class="flex items-center justify-between mt-0.5">
+<p class="font-body-sm text-body-sm text-white font-medium line-clamp-1">Sunset bridge ride 🚲🌅</p>
+<button aria-label="React with Spark" class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white hover:text-primary-container flex items-center justify-center active:scale-125 transition-transform" onclick="event.stopPropagation(); reactSpark(this)">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5: Elena Rostova (Ceramics) -->
+<div class="spark-card relative rounded-lg overflow-hidden bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] group flex flex-col justify-between aspect-[9/14] cursor-pointer" onclick="openSparkModal('Elena Rostova', 'Ceramics just fired', '🏺 Pottery Studio', '3h ago')">
+<!-- Background Visual -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Artisan ceramic studio scene showing handcrafted pastel glazed ceramic mugs fresh from kiln on rustic wooden workbench, clay dust, warm sunbeam through workshop window" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQuEsSGgZPo5oAYu7wp3J4pfJfg00gh5t_Si8REPmOXr6DM3dQCvUIAG4zrumuOXiVMAidckjeRTixXywTS9zjXP8hZdKJ1DdvV5cQJtXcmN6QCXR-igMQtFQzGpFRlNbnzTHS04skonbzysHY4Tex3KT9w1vs6pv_zfJwFLOUUgOo3SR6mDHkwJbHxugAlX8ojh_0AXbR6cpMTik1AJFHHT3Yhpdgs6fo3kxQeOMwAPZhrJd4xwvS')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/85"></div>
+<div class="relative z-10 p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-8 h-8 rounded-full p-0.5 bg-surface-container flex-shrink-0">
+<img class="w-full h-full rounded-full object-cover" data-alt="Charming headshot of Elena Rostova wearing studio apron with smudges of clay, warm artistic vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQmFKJkXPn8_OsDw5GEiddm4XBTEgFCzouId5WlLXx-aprKIB4P5hHVvcJ8iZx_c96eQo6qSYX9_8mVNsfps67oxFP4m5_nVd95W-QkK3nBoQgax-i5a8r9yARCKh_Zc0Vdcw7sdSRILI-1ItNvZMRVwpxRbjx1KuJb8kWSHzBj1lO-uk2i2pSNl0XoxMh01gdIeotWO_95sNp-MeYHz2TANQybJa_cMIiQGRjYdUB2Gzi9vklQ97Y"/>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-white font-bold truncate drop-shadow-sm">Elena R.</p>
+<p class="font-label-sm text-label-sm text-white/80 drop-shadow-sm">3h ago</p>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-white/40"></span>
+</div>
+<div class="relative z-10 p-space-sm flex flex-col gap-1.5">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-white font-label-sm text-label-sm w-fit max-w-full">
+<span class="material-symbols-outlined text-[14px]">palette</span>
+<span class="truncate">Ceramic Craft</span>
+</div>
+<div class="flex items-center justify-between mt-0.5">
+<p class="font-body-sm text-body-sm text-white font-medium line-clamp-1">Fresh from kiln! 🏺✨</p>
+<button aria-label="React with Spark" class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white hover:text-primary-container flex items-center justify-center active:scale-125 transition-transform" onclick="event.stopPropagation(); reactSpark(this)">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 6: Alex Rivera (Park Reading) -->
+<div class="spark-card relative rounded-lg overflow-hidden bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] group flex flex-col justify-between aspect-[9/14] cursor-pointer" onclick="openSparkModal('Alex Rivera', 'Cozy rainy day reading', '📖 Central Park', '4h ago')">
+<!-- Background Visual -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Cozy scene in a lush green city park under a willow tree, hands holding open a vintage paperback novel, drops of drizzle on grass, warm thermos cup nearby" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3av-b6XnGnKzHTcZBhWRWFpCATjnIT_b7nBv2HQOfuC8y8cInxahkbJIWuxx84HC_4i5AjKtv8vPGRznfgXbhy8mhoBP27aE3YBPZHjgIlilDXPoa2tCAYkjqOk3q1uimVaM_cx6wYbTMsBjWH0i9WpR6MZaK-gJXN3aj3fJIHj2hfLYVDvaLxBTI1rSPUkwQz92J6dQOXwNzU-fKlMD4TtWhaQiwCByBF6HfimnASn_Ku0K77-jH')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/85"></div>
+<div class="relative z-10 p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-8 h-8 rounded-full p-0.5 bg-surface-container flex-shrink-0">
+<img class="w-full h-full rounded-full object-cover" data-alt="Profile avatar of Alex Rivera in glasses and cozy olive trench jacket, outdoors in park setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZYtNWV3wjDSo1y9Qf-OSwCT8KnTyovsFsMzgulkZZ5Q6Fiamq16XPNhI-wsG9m5uIUxAjH1NoXql-wY_bS2GKFoOsv5sx80sft4e9BPQyWDs4axTSldHsxkeKCmBYP9pqVndlslfdA4GU2BQ7lJa6bi_XGKDZXZRrVP9xMOgm2GJSkXLvfzap7ti1vI8OoLSkY98tFPSAB1YatAajBPAeuJG03WOustmlUevuF0SpRw81mrT-Eief"/>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-white font-bold truncate drop-shadow-sm">Alex Rivera</p>
+<p class="font-label-sm text-label-sm text-white/80 drop-shadow-sm">4h ago</p>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-white/40"></span>
+</div>
+<div class="relative z-10 p-space-sm flex flex-col gap-1.5">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-white font-label-sm text-label-sm w-fit max-w-full">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+<span class="truncate">Reading nook</span>
+</div>
+<div class="flex items-center justify-between mt-0.5">
+<p class="font-body-sm text-body-sm text-white font-medium line-clamp-1">Before it rains 🌧📖</p>
+<button aria-label="React with Spark" class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white hover:text-primary-container flex items-center justify-center active:scale-125 transition-transform" onclick="event.stopPropagation(); reactSpark(this)">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- End of Feed Warm Human Spark Note -->
+<div class="mt-space-lg mb-space-md p-space-md rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-semibold truncate">You've caught up on all 14 Sparks</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sparks disappear after 24h. Stay in the moment!</p>
+</div>
+</div>
+<!-- Floating "+ New Spark" Action Island Button -->
+<div class="fixed bottom-6 left-0 right-0 px-gutter flex justify-center pointer-events-none z-40">
+<button class="pointer-events-auto flex items-center gap-2 px-space-lg py-3 rounded-full bg-gradient-to-r from-primary-container to-secondary text-on-primary font-label-lg text-label-lg shadow-[0_8px_24px_rgba(255,122,89,0.4)] active:scale-95 transition-all hover:shadow-[0_12px_28px_rgba(120,87,248,0.45)]" onclick="triggerToast('Opening Spark Studio ✨')">
+<span class="material-symbols-outlined text-[20px]">add_a_photo</span>
+<span>Post a Spark</span>
+</button>
+</div>
+<!-- Micro Interaction Toast Container -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-space-md py-2 rounded-full font-label-md text-label-md shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-50 flex items-center gap-2" id="toast">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">check_circle</span>
+<span id="toast-text">Feedback</span>
+</div>
+<!-- Spark Full-Screen Quick Viewer Modal / Sheet -->
+<div class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex-col justify-between p-gutter transition-opacity duration-300 opacity-0" id="spark-modal" onclick="closeSparkModal()">
+<!-- Top Progress & User Header -->
+<div class="w-full flex flex-col gap-3 pt-safe" onclick="event.stopPropagation()">
+<!-- Story Segments Bar -->
+<div class="w-full flex gap-1 h-1">
+<div class="flex-1 bg-white rounded-full"></div>
+<div class="flex-1 bg-white/40 rounded-full"></div>
+<div class="flex-1 bg-white/40 rounded-full"></div>
+</div>
+<div class="flex items-center justify-between text-white">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-primary-container p-0.5">
+<div class="w-full h-full rounded-full bg-surface-container flex items-center justify-center font-bold text-on-surface font-label-md text-label-md" id="modal-avatar-initial">L</div>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold" id="modal-author">Liam Chen</h4>
+<p class="font-label-sm text-label-sm text-white/70" id="modal-time">12m ago</p>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-white active:scale-90 transition-transform" onclick="closeSparkModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Center Content Details -->
+<div class="flex flex-col items-center justify-center text-center my-auto px-space-md" onclick="event.stopPropagation()">
+<div class="w-16 h-16 rounded-full bg-gradient-to-tr from-primary-container to-secondary flex items-center justify-center text-white mb-4 shadow-xl">
+<span class="material-symbols-outlined text-[32px]">auto_awesome</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white font-bold mb-2" id="modal-title">Spark Story</h3>
+<div class="px-space-md py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white font-label-md text-label-md inline-flex items-center gap-1.5" id="modal-tag">
+        🎧 Late Night Lo-fi
+      </div>
+</div>
+<!-- Bottom Quick Reply & Reaction Bar -->
+<div class="w-full flex items-center gap-space-sm pb-safe" onclick="event.stopPropagation()">
+<div class="flex-1 h-12 rounded-full bg-white/15 backdrop-blur-lg px-space-md flex items-center justify-between text-white">
+<input class="bg-transparent border-0 outline-none text-white placeholder-white/60 font-body-md text-body-md w-full mr-2" placeholder="Send a sweet reply..." type="text"/>
+<button class="material-symbols-outlined text-white/80 hover:text-white" onclick="triggerToast('Reply sent! 💌'); closeSparkModal();">send</button>
+</div>
+<button class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-lg text-white hover:text-primary-container flex items-center justify-center active:scale-125 transition-transform" onclick="triggerToast('Loved! ❤️')">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-lg text-white hover:text-tertiary-fixed flex items-center justify-center active:scale-125 transition-transform" onclick="triggerToast('Sparked! ⚡️')">
+<span class="material-symbols-outlined text-[24px]">bolt</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function triggerToast(text) {
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    if (!toast || !toastText) return;
+    toastText.innerText = text;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2000);
+  }
+
+  function setFilter(button, category) {
+    document.querySelectorAll('.filter-chip').forEach(btn => {
+      btn.classList.remove('bg-secondary', 'text-on-secondary', 'shadow-[0_4px_12px_rgba(95,58,221,0.25)]');
+      btn.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+    });
+    button.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+    button.classList.add('bg-secondary', 'text-on-secondary', 'shadow-[0_4px_12px_rgba(95,58,221,0.25)]');
+    triggerToast('Filtered: ' + category);
+  }
+
+  function reactSpark(btn) {
+    btn.classList.toggle('text-primary-container');
+    triggerToast('Reacted with love! ✨');
+  }
+
+  function openSparkModal(author, title, tag, time) {
+    const modal = document.getElementById('spark-modal');
+    document.getElementById('modal-author').innerText = author;
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-tag').innerText = tag;
+    document.getElementById('modal-time').innerText = time;
+    document.getElementById('modal-avatar-initial').innerText = author.charAt(0);
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+      modal.classList.remove('opacity-0');
+      modal.classList.add('opacity-100');
+    }, 10);
+  }
+
+  function closeSparkModal() {
+    const modal = document.getElementById('spark-modal');
+    modal.classList.remove('opacity-100');
+    modal.classList.add('opacity-0');
+    setTimeout(() => {
+      modal.classList.add('hidden');
+    }, 300);
+  }
+</script></main></body></html>

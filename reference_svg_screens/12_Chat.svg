@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="2340" viewBox="0 0 1080 2340">
+<defs>
+  <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF6FAE"/><stop offset="1" stop-color="#9B7BFF"/></linearGradient>
+  <linearGradient id="soft" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF0F7"/><stop offset="1" stop-color="#F0EDFF"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-opacity=".10"/></filter>
+</defs>
+<rect width="1080" height="2340" rx="48" fill="#F8F7FC"/>
+<rect x="0" y="0" width="1080" height="150" fill="white" opacity=".9"/>
+<text x="70" y="92" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#25233A">Aarav</text>
+
+<circle cx="960" cy="75" r="40" fill="#FFF0F7"/><text x="960" y="88" font-family="Arial, sans-serif" font-size="45" font-weight="700" fill="#6E687E" text-anchor="middle">⋮</text>
+<circle cx="95" cy="75" r="38" fill="url(#soft)"/><text x="95" y="88" font-family="Arial, sans-serif" font-size="30" font-weight="400" fill="#77748A" text-anchor="middle">🐰</text>
+<text x="150" y="65" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#25233A" text-anchor="start">Aarav</text><text x="150" y="100" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#3BB878" text-anchor="start">online</text>
+<text x="540" y="300" font-family="Arial" font-size="24" fill="#AAA6B7" text-anchor="middle">Today</text>
+<rect x="80" y="420" width="560" height="105" rx="30" fill="white"/><text x="125" y="485" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#25233A" text-anchor="start">Hey! Welcome to Bunny 👋</text>
+<rect x="430" y="570" width="570" height="105" rx="30" fill="#FFE8F2"/><text x="475" y="635" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#25233A" text-anchor="start">Thanks! This looks amazing.</text>
+<rect x="80" y="720" width="500" height="105" rx="30" fill="white"/><text x="125" y="785" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#25233A" text-anchor="start">Want to chat later?</text>
+<rect x="55" y="2020" width="850" height="115" rx="58" fill="white" stroke="#E5E2EC" stroke-width="3"/>
+<text x="100" y="2092" font-family="Arial, sans-serif" font-size="42" font-weight="400" fill="#FF6FAE" text-anchor="start">＋</text><text x="165" y="2092" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#A09CAC" text-anchor="start">Message...</text>
+<circle cx="965" cy="2078" r="57" fill="url(#pink)"/><text x="965" y="2093" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="white" text-anchor="middle">➤</text>
+
+<rect x="0" y="2250" width="1080" height="90" fill="white"/>
+<text x="70" y="2305" font-family="Arial" font-size="28" fill="#A4A1B4">Bunny</text>
+<circle cx="1010" cy="2290" r="14" fill="#FF6FAE"/>
+</svg>

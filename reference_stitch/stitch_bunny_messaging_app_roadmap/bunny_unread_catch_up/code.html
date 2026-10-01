@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#a7391e", "surface-container": "#efecff", "surface-bright": "#fcf8ff", "on-error": "#ffffff", "surface-dim": "#dad8ef", "surface-container-low": "#f5f2ff", "tertiary-fixed-dim": "#4edea3", "inverse-on-surface": "#f2efff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#862208", "on-tertiary-container": "#00412b", "inverse-surface": "#2f2f41", "on-secondary": "#ffffff", "on-surface-variant": "#58423c", "primary-fixed": "#ffdad2", "on-primary-container": "#701500", "outline-variant": "#dfc0b8", "surface": "#fcf8ff", "surface-container-high": "#e8e6fe", "tertiary-container": "#0cb880", "on-secondary-container": "#fffbff", "background": "#fcf8ff", "error-container": "#ffdad6", "surface-variant": "#e3e0f8", "tertiary-fixed": "#6ffbbe", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-container": "#ff7a59", "on-tertiary-fixed": "#002113", "on-background": "#1a1a2b", "primary-fixed-dim": "#ffb4a2", "on-secondary-fixed": "#1c0062", "surface-container-highest": "#e3e0f8", "inverse-primary": "#ffb4a2", "secondary-container": "#7857f8", "secondary": "#5f3add", "primary": "#a7391e", "on-secondary-fixed-variant": "#4918c8", "on-tertiary-fixed-variant": "#005236", "secondary-fixed": "#e6deff", "on-error-container": "#93000a", "on-surface": "#1a1a2b", "tertiary": "#006c49", "outline": "#8b716b", "error": "#ba1a1a", "on-primary-fixed": "#3c0700", "secondary-fixed-dim": "#cabeff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter": "1rem", "gutter-mobile": "0.75rem", "space-md": "0.875rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-lg": "1.25rem", "margin": "1.25rem", "space-sm": "0.5rem", "margin-mobile": "1rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "800" }], "body-md": ["15px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Bunny App Icon" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Ull0OCgPXzrUp8FTlakK-4B7e2Ky2GB2a-J0L5_WJdjCUGWQRidQkSqX1DA88cVGXyPGOQvvboBWfVu6vi-IJ4-3jh47YowodR4iNI68P2MoCecmuQHGNdeULfl-YogXqvLpnlzAE5Hr0mEzCRs_A9AVMXu4jiYzzKoSnB9kr_9rnNdnbYly_Ya7Ou5UqPdxeTDHLAn_ySlcFxSMsI5uT-9-bkw1JcROA8esJ2HXLuNMUmHGXWAo8U0CI"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Bunny</span></div><div class="flex items-center gap-space-md"><span class="font-label-lg text-label-lg text-on-surface-variant font-semibold">Chats</span><div class="relative flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_rgba(30,30,47,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATkKgLqw87aNNkWuVkGLtBrGB_Qj-hlPmTMNHlaJVFGyUBJYJ2GjnmgYtzi7ZsD4iDdU8aCMri7QOJEcXKlab6uGBeqyX54dVpu3d3t9PRRVDlK8EI7VMLb1vjUEFdSRrT69UKKlHcL84mV9Hv1a0JjntSQ0LmWqEbClX9KmiCfCSRwn-4t5zY_LGv4RyaNvhgXj-P0hCCkWZ0lOBYFeQ0RNmGD6MSJC-RHK95-SnU2eQY4uIGyaFU"/><span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-tertiary-container rounded-full ring-2 ring-surface"></span></div></div></div></header><main class="flex-1 w-full bg-background px-gutter pt-16 pb-28"><div class="flex flex-col w-full pb-6 space-y-space-md">
+<!-- Interactive Filter Bar (Horizontal Scrolling Pills) -->
+<div class="w-full -mx-gutter px-gutter overflow-x-auto no-scrollbar flex items-center gap-space-xs py-1">
+<a class="shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md shadow-sm active:scale-95 transition-transform flex items-center gap-1" href="#">
+<span>All Chats</span>
+</a>
+<a class="shrink-0 px-space-md py-1.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-[0_4px_14px_rgba(120,87,248,0.28)] flex items-center gap-1.5 active:scale-95 transition-transform" href="#">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>Unread (4)</span>
+</a>
+<a class="shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md shadow-sm active:scale-95 transition-transform flex items-center gap-1.5" href="#">
+<span>Mentions</span>
+<span class="w-4 h-4 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] flex items-center justify-center font-bold">1</span>
+</a>
+<a class="shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md shadow-sm active:scale-95 transition-transform" href="#">
+<span>Direct</span>
+</a>
+<a class="shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md shadow-sm active:scale-95 transition-transform" href="#">
+<span>Groups</span>
+</a>
+</div>
+<!-- Batch Action & AI Quick Digest Row -->
+<div class="flex items-center justify-between gap-space-sm pt-0.5">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container active:scale-95 transition-all shadow-sm" id="mark-all-btn">
+<span class="material-symbols-outlined text-[16px] text-tertiary">done_all</span>
+<span>Mark all read</span>
+</button>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-secondary-fixed via-primary-fixed to-secondary-fixed text-on-secondary-fixed font-label-md text-label-md shadow-sm cursor-pointer active:scale-95 transition-all" onclick="document.getElementById('ai-summary-card').scrollIntoView({behavior:'smooth'})">
+<span class="material-symbols-outlined text-[15px] text-secondary">auto_awesome</span>
+<span class="font-bold tracking-tight">Quick Digest (2)</span>
+</div>
+</div>
+<!-- Smart Catch-up / TL;DR Digest Card -->
+<div class="relative overflow-hidden rounded-lg bg-gradient-to-br from-surface-container-high via-surface-container to-primary-fixed/40 p-space-md shadow-[0_8px_24px_-4px_rgba(120,87,248,0.12)]" id="ai-summary-card">
+<!-- Ambient micro sparkles background decoration -->
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-[0_2px_8px_rgba(95,58,221,0.3)]">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">AI Spark Summary</h2>
+<span class="px-1.5 py-0.5 rounded-full bg-tertiary-container/20 text-on-tertiary-container font-label-sm text-[10px] font-bold">READY</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Synthesized from 4 unread threads</p>
+</div>
+</div>
+<button class="w-7 h-7 rounded-full bg-surface-container-lowest/80 text-on-surface-variant flex items-center justify-center hover:bg-surface-container-lowest transition-colors" onclick="this.closest('#ai-summary-card').classList.toggle('opacity-50')">
+<span class="material-symbols-outlined text-[16px]">expand_less</span>
+</button>
+</div>
+<!-- Digest bullet insights -->
+<div class="space-y-1.5 my-2.5">
+<div class="flex items-start gap-2 bg-surface-container-lowest/90 backdrop-blur-sm p-2 rounded">
+<span class="text-primary font-bold text-xs mt-0.5">•</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">
+<span class="font-bold text-on-surface">Liam:</span> Needs onboarding Figma exports before <span class="font-semibold text-primary">2:00 PM</span> for client deck.
+        </p>
+</div>
+<div class="flex items-start gap-2 bg-surface-container-lowest/90 backdrop-blur-sm p-2 rounded">
+<span class="text-secondary font-bold text-xs mt-0.5">•</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">
+<span class="font-bold text-on-surface">Product Squad:</span> Maya tagged for Bunny Sticker review at <span class="font-semibold text-secondary">3:00 PM</span> today.
+        </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">timer</span>
+        Read time ~ 18s
+      </span>
+<button class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_4px_12px_rgba(255,122,89,0.35)] flex items-center gap-1 active:scale-95 transition-all">
+<span>Catch Up in 30s</span>
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+</button>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex items-center justify-between px-1 pt-1">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Needs Attention</h3>
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[11px] font-bold">Priority</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sorted by urgency</span>
+</div>
+<!-- Conversations Roster -->
+<div class="space-y-space-md" id="priority-cards-container">
+<!-- Card 1: Liam Chen (Direct Message + Quick Action Bar) -->
+<div class="group relative rounded-lg bg-surface-container-lowest p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] transition-all hover:shadow-[0_8px_24px_-4px_rgba(30,30,47,0.1)] overflow-hidden">
+<!-- Glow accent on hover/active -->
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex items-start gap-space-sm pl-1.5">
+<!-- Avatar with Active Indicator -->
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Portrait photo of Liam, a young male product designer with round glasses and a warm smile, soft natural lighting, creative studio background, pastel lavender and coral palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0pl5YEqS8hV0gNW67xfULFzvpUnqW6--rJJAHifw586NP0l6PNoMYyTgZ8vxk6EupRSC307bRQ2HoEFIzzGfBM8WiXd68y6MRqMJVw2AOR5EdDYn8lG0V4NQsTHPEUQXy5us3s3-aHuDp9FUhgbUCZ-ifcbazluVB6e94ffFIHvaJ7V_pbeSeHo7HOny7v-MacFgO4Xjl5oKx3tVrXLU7pYowEcGQgd6DXHaJR8k0tPOOhWLJZepx"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-tertiary rounded-full shadow-[0_0_0_2px_#ffffff,0_0_8px_rgba(16,185,129,0.6)]"></span>
+</div>
+<!-- Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Liam Chen</h4>
+<span class="shrink-0 font-label-sm text-label-sm text-primary font-bold">2m ago</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-[10px] font-bold">Direct Message</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Figma Onboarding Flow</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1.5 leading-snug line-clamp-2">
+            Can you send the design file for the onboarding flow? We need it for the client deck today! 🚀
+          </p>
+<!-- Quick Actions Mini Island -->
+<div class="mt-3 pt-2.5 flex items-center gap-1.5 flex-wrap">
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-all active:scale-95 shadow-sm" onclick="this.innerHTML='Sent! ✓'; this.classList.add('bg-tertiary-container','text-on-tertiary')">
+              On it! ⚡
+            </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-all active:scale-95 shadow-sm" onclick="this.innerHTML='Sent! ✓'; this.classList.add('bg-tertiary-container','text-on-tertiary')">
+              Sending now 👍
+            </button>
+<button class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-90 shadow-sm ml-auto">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Product Squad (Design Team group with mention) -->
+<div class="group relative rounded-lg bg-surface-container-lowest p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] transition-all hover:shadow-[0_8px_24px_-4px_rgba(30,30,47,0.1)] overflow-hidden">
+<!-- Unread indicator bar on left border of card in vibrant coral -->
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex items-start gap-space-sm pl-1.5">
+<!-- Group Avatar with Bunny Badge -->
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-display font-bold text-headline-sm shadow-sm">
+            🐰
+          </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-primary-container rounded-full text-on-primary flex items-center justify-center shadow-[0_0_0_2px_#ffffff]">
+<span class="material-symbols-outlined text-[10px]">alternate_email</span>
+</span>
+</div>
+<!-- Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<div class="flex items-center gap-1.5 min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Product Squad</h4>
+<span class="shrink-0 w-5 h-5 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] font-bold flex items-center justify-center">5</span>
+</div>
+<span class="shrink-0 font-label-sm text-label-sm text-on-surface-variant">14m ago</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-[10px] font-bold">1 mention @Maya</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Design Team Group</span>
+</div>
+<!-- Quoted Mention Snippet with playful container -->
+<div class="mt-2 p-2 rounded bg-surface-container-low text-on-surface">
+<p class="font-body-sm text-body-sm leading-snug">
+<span class="font-bold text-secondary">Sophie:</span> "<span class="bg-primary-fixed px-1 rounded text-on-primary-fixed-variant font-semibold">@Maya</span> Let's review the new bunny sticker pack at 3pm! 🚀"
+            </p>
+</div>
+<!-- Quick reactions pill stack -->
+<div class="mt-2.5 flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-transform active:scale-95">
+<span>See you there!</span>
+</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-transform active:scale-95">
+<span>Calendar accepted 📅</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Design Bunnies Team (Voice Note unread preview) -->
+<div class="group relative rounded-lg bg-surface-container-lowest p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] transition-all hover:shadow-[0_8px_24px_-4px_rgba(30,30,47,0.1)] overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-start gap-space-sm pl-1.5">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Playful group of 3 smiling creative team members posing casually outdoors under gentle sunshine, warmth and camaraderie, modern pastel color tones, ultra crisp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNdk5jthwQ1snUq5D_KdTQzCXrPmFLgU26dUySBzKNNvgobD9DcQO1_i1GcNuc8ZTXGUXiBl0nBqsJaukrGp-XCCaUyDxksetkzXObX6aqtj7eW4jxW8LlWmPu3XAKafpq-oPnBxlJyjOimcLEsas-BuOmNWO9j5e5AVIAQ09TLcklayowFm8b1phAKWpxq_GslAPOyE4im_Rbm0SX9gJdw6_W7NIGGh3IEbRBhDQjHVrnrHMMl9Yb"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-secondary rounded-full shadow-[0_0_0_2px_#ffffff]"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Design Bunnies Team</h4>
+<span class="shrink-0 font-label-sm text-label-sm text-on-surface-variant">32m ago</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary font-semibold mt-0.5">
+            Liam left a voice note (0:45)
+          </p>
+<!-- Mini Inline Audio Player Waveform -->
+<div class="mt-2 flex items-center gap-2.5 bg-surface-container-low p-2 rounded-full">
+<button class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-[0_2px_8px_rgba(255,122,89,0.3)] active:scale-90 transition-transform" onclick="const icon=this.querySelector('.material-symbols-outlined'); icon.textContent = icon.textContent === 'play_arrow' ? 'pause' : 'play_arrow';">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+<!-- SVG Visual Waveform Bars -->
+<div class="flex-1 flex items-center justify-between gap-0.5 h-6 px-1">
+<span class="w-1 h-3 rounded-full bg-secondary"></span>
+<span class="w-1 h-4 rounded-full bg-secondary"></span>
+<span class="w-1 h-2 rounded-full bg-secondary"></span>
+<span class="w-1 h-5 rounded-full bg-secondary"></span>
+<span class="w-1 h-6 rounded-full bg-primary-container animate-pulse"></span>
+<span class="w-1 h-3 rounded-full bg-secondary-fixed-dim"></span>
+<span class="w-1 h-4 rounded-full bg-secondary-fixed-dim"></span>
+<span class="w-1 h-2 rounded-full bg-secondary-fixed-dim"></span>
+<span class="w-1 h-5 rounded-full bg-secondary-fixed-dim"></span>
+<span class="w-1 h-3 rounded-full bg-secondary-fixed-dim"></span>
+<span class="w-1 h-1 rounded-full bg-secondary-fixed-dim"></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant pr-2 shrink-0">0:45</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4: Noah Vance (Casual Chat) -->
+<div class="group relative rounded-lg bg-surface-container-lowest p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] transition-all hover:shadow-[0_8px_24px_-4px_rgba(30,30,47,0.1)] overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary-fixed"></div>
+<div class="flex items-start gap-space-sm pl-1.5">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Close-up portrait of Noah, an energetic friend with headset hanging around his neck, cozy bedroom interior with ambient purple LED neon lights, warm genuine expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6QmsyXO48CyhvnbcV1OWZSI0ENrjA34Xfk0bsYaRHggTpKy-5-9V-wxn474hXmSLBxvuFxbzDM9_0Z6Nkyl-mcIRSBZVl9Kb2g41YmJf_yEl3r_prhakuJqmVUcKjYHAxFJHvmuOJc-n1R-cRF8JFrXgCVlYRNi7WPiU-tXFenCR5C7HFQ_m0yqX_Exfe5147Ybu1cmIiG3MBFuSyBR-Me0KsaqbunQfpW-axpViHKm0D8XllRp8V"/>
+<!-- Gaming presence indicator -->
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-secondary text-[8px] text-on-secondary rounded-full flex items-center justify-center shadow-[0_0_0_2px_#ffffff]">
+<span class="material-symbols-outlined text-[9px]">sports_esports</span>
+</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Noah Vance</h4>
+<span class="shrink-0 font-label-sm text-label-sm text-on-surface-variant">1h ago</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px] font-bold">1 new</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Catch up call?</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-snug line-clamp-2">
+            Haha that bunny sticker is hilarious 😂 Are we still jumping on a call?
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Friendly Gesture / Tips Micro Accent -->
+<div class="mt-4 p-space-md rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">touch_app</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Pro Bunny Tip</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Swipe right to mark read • Long press to snooze</p>
+</div>
+</div>
+<span class="font-display text-2xl select-none">✨</span>
+</div>
+<!-- Interactive JavaScript for Live Filter Toggle & Mark All Feedback -->
+<script>
+    document.getElementById('mark-all-btn').addEventListener('click', function() {
+      const container = document.getElementById('priority-cards-container');
+      this.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">check</span> All caught up!';
+      this.classList.add('bg-tertiary-container', 'text-on-tertiary');
+      
+      const unreadIndicators = container.querySelectorAll('.w-1\\.5');
+      unreadIndicators.forEach(el => el.classList.remove('bg-primary-container', 'bg-secondary'));
+    });
+  </script>
+</div></main><div class="fixed bottom-0 w-full z-50 pointer-events-none pb-safe"><div class="px-gutter pb-space-sm pt-space-xs"><nav class="pointer-events-auto mx-auto max-w-md bg-surface-container-lowest/85 backdrop-blur-2xl rounded-full p-space-xs shadow-[0_12px_36px_-4px_rgba(120,87,248,0.16)] flex items-center justify-between" data-active-classes="bg-primary-container text-on-primary shadow-[0_4px_14px_rgba(255,122,89,0.35)]"><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="chats" href="#"><span class="material-symbols-outlined text-[22px]">chat_bubble</span><span class="font-label-sm text-label-sm mt-0.5">Chats</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="friends" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm mt-0.5">Friends</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="discover" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-sm text-label-sm mt-0.5">Discover</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></nav></div></div></body></html>

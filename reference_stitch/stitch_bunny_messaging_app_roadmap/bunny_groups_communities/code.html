@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#a7391e", "surface-container": "#efecff", "surface-bright": "#fcf8ff", "on-error": "#ffffff", "surface-dim": "#dad8ef", "surface-container-low": "#f5f2ff", "tertiary-fixed-dim": "#4edea3", "inverse-on-surface": "#f2efff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#862208", "on-tertiary-container": "#00412b", "inverse-surface": "#2f2f41", "on-secondary": "#ffffff", "on-surface-variant": "#58423c", "primary-fixed": "#ffdad2", "on-primary-container": "#701500", "outline-variant": "#dfc0b8", "surface": "#fcf8ff", "surface-container-high": "#e8e6fe", "tertiary-container": "#0cb880", "on-secondary-container": "#fffbff", "background": "#fcf8ff", "error-container": "#ffdad6", "surface-variant": "#e3e0f8", "tertiary-fixed": "#6ffbbe", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-container": "#ff7a59", "on-tertiary-fixed": "#002113", "on-background": "#1a1a2b", "primary-fixed-dim": "#ffb4a2", "on-secondary-fixed": "#1c0062", "surface-container-highest": "#e3e0f8", "inverse-primary": "#ffb4a2", "secondary-container": "#7857f8", "secondary": "#5f3add", "primary": "#a7391e", "on-secondary-fixed-variant": "#4918c8", "on-tertiary-fixed-variant": "#005236", "secondary-fixed": "#e6deff", "on-error-container": "#93000a", "on-surface": "#1a1a2b", "tertiary": "#006c49", "outline": "#8b716b", "error": "#ba1a1a", "on-primary-fixed": "#3c0700", "secondary-fixed-dim": "#cabeff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter": "1rem", "gutter-mobile": "0.75rem", "space-md": "0.875rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-lg": "1.25rem", "margin": "1.25rem", "space-sm": "0.5rem", "margin-mobile": "1rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "800" }], "body-md": ["15px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Bunny App Icon" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Ull0OCgPXzrUp8FTlakK-4B7e2Ky2GB2a-J0L5_WJdjCUGWQRidQkSqX1DA88cVGXyPGOQvvboBWfVu6vi-IJ4-3jh47YowodR4iNI68P2MoCecmuQHGNdeULfl-YogXqvLpnlzAE5Hr0mEzCRs_A9AVMXu4jiYzzKoSnB9kr_9rnNdnbYly_Ya7Ou5UqPdxeTDHLAn_ySlcFxSMsI5uT-9-bkw1JcROA8esJ2HXLuNMUmHGXWAo8U0CI"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Bunny</span></div><div class="flex items-center gap-space-md"><span class="font-label-lg text-label-lg text-on-surface-variant font-semibold">Chats</span><div class="relative flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_rgba(30,30,47,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATkKgLqw87aNNkWuVkGLtBrGB_Qj-hlPmTMNHlaJVFGyUBJYJ2GjnmgYtzi7ZsD4iDdU8aCMri7QOJEcXKlab6uGBeqyX54dVpu3d3t9PRRVDlK8EI7VMLb1vjUEFdSRrT69UKKlHcL84mV9Hv1a0JjntSQ0LmWqEbClX9KmiCfCSRwn-4t5zY_LGv4RyaNvhgXj-P0hCCkWZ0lOBYFeQ0RNmGD6MSJC-RHK95-SnU2eQY4uIGyaFU"/><span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-tertiary-container rounded-full ring-2 ring-surface"></span></div></div></div></header><main class="flex-1 w-full bg-background px-gutter pt-16 pb-28"><div class="flex flex-col w-full space-y-space-lg pb-10">
+<!-- Search & Filter Bar -->
+<section class="flex items-center gap-space-sm pt-space-xs">
+<div class="relative flex-1 flex items-center bg-surface-container-low rounded-full px-space-md py-2.5 shadow-[0_2px_12px_rgba(30,30,47,0.03)] focus-within:bg-surface-container-lowest focus-within:shadow-[0_4px_16px_rgba(124,92,252,0.12)] transition-all">
+<span class="material-symbols-outlined text-outline text-[20px] mr-2">search</span>
+<input class="w-full bg-transparent border-0 outline-none text-on-surface placeholder:text-outline font-body-md text-body-md min-w-0" placeholder="Search groups, topics, or clubs..." type="text"/>
+<span class="material-symbols-outlined text-outline hover:text-on-surface cursor-pointer text-[20px] ml-1">mic</span>
+</div>
+<button aria-label="Filters" class="w-11 h-11 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface shadow-[0_2px_12px_rgba(30,30,47,0.03)] hover:bg-surface-container transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</section>
+<!-- Category & Status Filter Chips -->
+<section class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5 -mx-gutter px-gutter">
+<button class="px-space-md py-1.5 rounded-full bg-secondary-container text-on-secondary font-label-md text-label-md shadow-[0_2px_8px_rgba(120,87,248,0.25)] flex items-center gap-1.5 whitespace-nowrap shrink-0 active:scale-95 transition-all">
+<span>All Groups</span>
+<span class="px-1.5 py-0.5 rounded-full bg-white/20 text-on-secondary font-label-sm text-label-sm">12</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_rgba(30,30,47,0.03)] flex items-center gap-1.5 whitespace-nowrap shrink-0 hover:bg-surface-container-low active:scale-95 transition-all">
+<span>Unread</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-outline">3</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_rgba(30,30,47,0.03)] flex items-center gap-1.5 whitespace-nowrap shrink-0 hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">graphic_eq</span>
+<span>Voice Active</span>
+<span class="font-label-sm text-label-sm text-outline">2</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_rgba(30,30,47,0.03)] flex items-center gap-1.5 whitespace-nowrap shrink-0 hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-secondary">explore</span>
+<span>Public Explore</span>
+</button>
+</section>
+<!-- Quick Action Cards Grid -->
+<section class="grid grid-cols-2 gap-space-sm">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-container to-[#ff9b79] p-space-md text-on-primary shadow-[0_8px_20px_rgba(255,122,89,0.25)] flex flex-col justify-between h-28 active:scale-[0.98] transition-all cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">add_reaction</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-white/25 text-on-primary font-label-sm text-label-sm">Quick</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm leading-tight text-on-primary">Create Group</p>
+<p class="font-body-sm text-body-sm text-white/90">Start a cozy space</p>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary-container to-[#967bff] p-space-md text-on-secondary-container shadow-[0_8px_20px_rgba(120,87,248,0.22)] flex flex-col justify-between h-28 active:scale-[0.98] transition-all cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-white/25 text-on-secondary-container font-label-sm text-label-sm">Explore</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm leading-tight text-on-secondary-container">Discover Clubs</p>
+<p class="font-body-sm text-body-sm text-white/90">Join public rooms</p>
+</div>
+</div>
+</section>
+<!-- Live Voice & Audio Hangouts -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse shadow-[0_0_8px_rgba(12,184,128,0.6)]"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Live Voice Hangouts</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold cursor-pointer">See all</span>
+</div>
+<div class="flex gap-space-sm overflow-x-auto no-scrollbar -mx-gutter px-gutter py-1">
+<!-- Voice Card 1 -->
+<div class="min-w-[260px] rounded-2xl bg-surface-container-lowest p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] flex flex-col justify-between space-y-3 shrink-0">
+<div>
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary-container animate-bounce">graphic_eq</span>
+              Voice Lounge
+            </span>
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">headphones</span>
+<span>6 in room</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2">🐰 Bunny Chill Lounge</h3>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Lofi beats, weekend chit-chat</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex -space-x-2 overflow-hidden items-center">
+<img class="inline-block h-7 w-7 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Portrait photo avatar of a young woman smiling warmly with natural lighting and soft pastel clothing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4U7p4pyH2_qheCJI1RQZcx78P__jiVdSLpunQswW3dMsWyvhlUoghToUHBkcGyLKZWtSMseet03G0n6j46piqOuQiWePdJNrYmblVNhnoGp2sxGFWhP5M4U8t6NSl2LDMTGqHA0ZeODHyLHlY83hw3Ehe0XJa7oJ202kxOfuBaiwfjdLcsqOx9WkBbn8Mn_hvC_wrt0RLZLN-qxXuDXvl443KdV-O52WtlgYg8Ux4utQL5u1cdOSe"/>
+<img class="inline-block h-7 w-7 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Profile avatar shot of a friendly young man with casual glasses in a warm creative studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCwWFE8xwq7PCPPPp_mqxD6ZM9j4cwVeoiedLXU1abGn2pMyuGqMgUczS7CU8506x2fWBQbUG0MztaV4UlOSIANNtVL8kf-JSiLUtmh4z9twJWWuGJfKv3JobjH27TBuzOjxZf9nrcye8sqygnP8iUW2QNGvEgIu5llk8FZleRkGNcVbLy0iLdlFD3bFDNPUM3owo84vftIvC7h0nxFU5402n_EJ3U-JW0Ewo9zmqH82nLvBUE4fHT"/>
+<img class="inline-block h-7 w-7 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Close up avatar portrait of a creative professional outdoors with cozy afternoon sunshine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXkF-LuEcGjshw6aZn4B_kS0ih6GBAxO4u5zZnOjVUxC-bTaqqi4BwHU_WvOlaxXTrEhpFOdlBaO01f00ep0z9IK5c27f2rl9x55hJ5QhjDppoQEBylMj4OTo8JASf89uvftxvTCqk7ollAZtZNCrurshagrNXA67WJSyBzGC-h9GAcy1t2hGSJNCJLbELfXLVqhBoZXkw76US4lt_YfcbicUJZMAiu8mQNY-0RRVVW7FUJITWxQyV"/>
+<div class="w-7 h-7 rounded-full bg-surface-container-high ring-2 ring-surface-container-lowest flex items-center justify-center font-label-sm text-label-sm text-on-surface-variant font-bold">+3</div>
+</div>
+<button class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-[0_4px_12px_rgba(255,122,89,0.35)] flex items-center gap-1 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">volume_up</span>
+            Hop in
+          </button>
+</div>
+</div>
+<!-- Voice Card 2 -->
+<div class="min-w-[260px] rounded-2xl bg-surface-container-lowest p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.06)] flex flex-col justify-between space-y-3 shrink-0">
+<div>
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">mic</span>
+              Critique
+            </span>
+<div class="flex items-center gap-1 text-outline font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">graphic_eq</span>
+<span>3 talking</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2">Design Jam &amp; Critiques</h3>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Mobile tab navigation audit</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex -space-x-2 overflow-hidden items-center">
+<img class="inline-block h-7 w-7 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Modern close up headshot avatar of a UI designer with vibrant playful headphones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRATZ9ybb_4_L6NXp5gG7PgzkcPEzRi2WIkT4pv4_g7SMI4iQulvxShABgkVz71N1_vkEtMama_bMXVac_C5667mXOhyzJDNZMMkhdRBK_tZjfEJ1Sy_zzUPRV1BKH0L5qAi5X25CdtXv7dUCKmPywErAfEfC5DjAJQ1LlWHiAIVedjTO7ozk_IJHGhgvhEZTfpUssI3KXwyrPz8Ym_yVnxIsySX2wXolXl9UuNCZRq9e5kNl5ipY_"/>
+<img class="inline-block h-7 w-7 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Portrait photo avatar of a female product designer smiling in bright daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc33JcA8F_joSc2PaICtgma5Dx3iQsTUN8_gQnkx-qnJzCPScdH8VFz_21qv7IeSnmMTaZNozCOT9LNOqYp2NrSHvMP6szY6WV09rsCXhjhTgfUa1RAWfpk1Eu4Pd9IE4z_Vl6pYAt-fseo1Xpb3UWQu7TKKq9RO5NfejCyOy56jJwQkzCjVgft4VN9m50s8cOfEng9QbF7aKTy9ane10_RNR63HJV_bHxUknDXNibYbne5IT1GbWs"/>
+</div>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-secondary font-label-md text-label-md font-semibold hover:bg-secondary-fixed active:scale-95 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">hearing</span>
+            Listen
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Active & Pinned Groups -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Your Active Groups</h2>
+<span class="font-label-sm text-label-sm text-outline">Pinned first</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Group 1: Pinned / Product Squad -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] flex gap-space-md items-start active:bg-surface-container-low transition-all cursor-pointer">
+<div class="relative shrink-0">
+<div class="w-13 h-13 rounded-2xl bg-gradient-to-tr from-primary-container to-[#ffa588] p-0.5 shadow-sm flex items-center justify-center">
+<div class="w-12 h-12 rounded-[14px] bg-surface-container-lowest flex items-center justify-center overflow-hidden">
+<span class="text-2xl">🐰</span>
+</div>
+</div>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-primary-container text-[16px] shrink-0" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Product Squad 🐰</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline shrink-0">Just now</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.2 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">Work &amp; Project</span>
+<span class="font-label-sm text-label-sm text-outline truncate">18 members • 4 online</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 truncate">
+<span class="font-semibold text-on-surface">Sophie:</span> "Let's review at 3pm! 🚀"
+          </p>
+</div>
+<div class="flex flex-col items-end justify-between self-stretch shrink-0">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center shadow-sm">5</span>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+</div>
+<!-- Group 2: Design Bunnies & UI/UX -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] flex gap-space-md items-start active:bg-surface-container-low transition-all cursor-pointer">
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-2xl bg-secondary-fixed flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[26px]">palette</span>
+</div>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Design Bunnies &amp; UI/UX</h3>
+<span class="font-label-sm text-label-sm text-outline shrink-0">4m ago</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.2 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed font-label-sm text-label-sm">Design</span>
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px] animate-pulse">graphic_eq</span>
+<span>Live Voice (3 talking)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 truncate">
+<span class="font-semibold text-secondary">Leo:</span> New design token export is ready 🎨
+          </p>
+</div>
+<div class="flex flex-col items-end justify-between self-stretch shrink-0">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+</div>
+<!-- Group 3: Weekend Hikers & Coffee -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] flex gap-space-md items-start active:bg-surface-container-low transition-all cursor-pointer">
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-2xl bg-[#fff2df] flex items-center justify-center shadow-sm">
+<span class="text-2xl">☕</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Weekend Hikers &amp; Coffee</h3>
+<span class="font-label-sm text-label-sm text-outline shrink-0">22m ago</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Social</span>
+<span class="font-label-sm text-label-sm text-outline">42 members</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 flex items-center gap-1 truncate">
+<span class="font-semibold text-on-surface">Alex:</span>
+<span class="material-symbols-outlined text-[15px] text-primary">photo_library</span>
+<span>Shared 2 photos</span>
+</p>
+</div>
+<div class="flex flex-col items-end justify-between self-stretch shrink-0">
+<span class="text-transparent w-2.5 h-2.5"></span>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+</div>
+<!-- Group 4: Indie Hackers Club -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] flex gap-space-md items-start active:bg-surface-container-low transition-all cursor-pointer">
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[24px]">lightbulb</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<div class="flex items-center gap-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Indie Hackers Club 💡</h3>
+<span class="material-symbols-outlined text-outline text-[15px]">notifications_off</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline shrink-0">1h ago</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Tech &amp; Builders</span>
+<span class="font-label-sm text-label-sm text-outline">156 members</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 truncate">
+<span class="font-semibold text-on-surface">Noah:</span> Ship it today! ⚡
+          </p>
+</div>
+<div class="flex flex-col items-end justify-between self-stretch shrink-0">
+<span class="text-transparent w-2.5 h-2.5"></span>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Discover Featured Communities -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Discover Featured Communities</h2>
+<p class="font-body-sm text-body-sm text-outline">Handpicked cozy clubs tailored for you</p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold cursor-pointer">Explore</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Public Group 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] space-y-3">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-2xl overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Charming atmospheric street photography of cherry blossoms and aesthetic indie coffee shop in Tokyo with gentle warm afternoon glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8dyO5eMnmMRFFNO_FZRik01T4XROJF2wEQm5zpGrgAEhFKvF_rmi5-qkbX6tmeRCJqYvLOHwHCc3M5k7CtqqwBFrShnIbL5E7DrYH3VyZnghGIo8A4Od0zUQSO5MG1-jNXs96CLLVvQGi7AGgs9kpeE8TJWrKF34ag2PmKq69kqpY8fr-1NdS9EdPYo3QL7LDARrA2NePxGKJb2Mih0e992-4SwEf7421G3fyM7RFM-ksdLGUh8kj"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">Travel &amp; Cities</span>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">groups</span>
+                1.2k members
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1 truncate">Tokyo &amp; Seoul Explorers 🌸</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Travel tips, hidden cafés, and evening city walks.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 text-outline font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>28 active today</span>
+</div>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-secondary hover:text-on-secondary active:scale-95 transition-all flex items-center gap-1 shadow-sm" onclick="handleJoinGroup(this)">
+<span class="material-symbols-outlined text-[16px]">group_add</span>
+            Join Group
+          </button>
+</div>
+</div>
+<!-- Public Group 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] space-y-3">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-2xl overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Cute, fluffy miniature lop bunny rabbit resting warmly on a soft knitted pastel blanket in warm indoor light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhTMRLXcaseZP-OWcr87TtSoaLsC1mXNmF9v0gv2fOjLNbRiYtqejN4EHspDURB5xNthQleU3iKJUGmXFZiCI02aJAxTQpbSmmBY5cEClHLWZamI729tU-hiICF6Za0psxcyL-3SmhCYwaiM03bnBqKcS94uVzzzMgQxvvONAjKtvrgw5vFgGV9uualD7WsMzheVQewlk6W0mJaW3XEWKOf2-gWjTx8HjFk0zeudOFntd3YBi3ZTRg"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Pets &amp; Care</span>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">groups</span>
+                3.4k members
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1 truncate">Rabbit Lovers &amp; Pet Care 🥕</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Share photos and tips for your fluffy companions.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 text-outline font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>114 active today</span>
+</div>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-secondary hover:text-on-secondary active:scale-95 transition-all flex items-center gap-1 shadow-sm" onclick="handleJoinGroup(this)">
+<span class="material-symbols-outlined text-[16px]">group_add</span>
+            Join Group
+          </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function handleJoinGroup(btn) {
+    if (btn.dataset.joined === 'true') {
+      btn.dataset.joined = 'false';
+      btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">group_add</span>Join Group`;
+      btn.className = "px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-secondary hover:text-on-secondary active:scale-95 transition-all flex items-center gap-1 shadow-sm";
+    } else {
+      btn.dataset.joined = 'true';
+      btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">check</span>Joined!`;
+      btn.className = "px-4 py-1.5 rounded-full bg-tertiary-container text-on-tertiary font-label-md text-label-md font-semibold shadow-[0_2px_8px_rgba(12,184,128,0.3)] active:scale-95 transition-all flex items-center gap-1";
+    }
+  }
+</script></main><div class="fixed bottom-0 w-full z-50 pointer-events-none pb-safe"><div class="px-gutter pb-space-sm pt-space-xs"><nav class="pointer-events-auto mx-auto max-w-md bg-surface-container-lowest/85 backdrop-blur-2xl rounded-full p-space-xs shadow-[0_12px_36px_-4px_rgba(120,87,248,0.16)] flex items-center justify-between" data-active-classes="bg-primary-container text-on-primary shadow-[0_4px_14px_rgba(255,122,89,0.35)]"><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="chats" href="#"><span class="material-symbols-outlined text-[22px]">chat_bubble</span><span class="font-label-sm text-label-sm mt-0.5">Chats</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="friends" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm mt-0.5">Friends</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="discover" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-sm text-label-sm mt-0.5">Discover</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></nav></div></div></body></html>

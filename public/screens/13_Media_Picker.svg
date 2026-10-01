@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="2340" viewBox="0 0 1080 2340">
+<defs>
+  <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF6FAE"/><stop offset="1" stop-color="#9B7BFF"/></linearGradient>
+  <linearGradient id="soft" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF0F7"/><stop offset="1" stop-color="#F0EDFF"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-opacity=".10"/></filter>
+</defs>
+<rect width="1080" height="2340" rx="48" fill="#F8F7FC"/>
+<rect x="0" y="0" width="1080" height="150" fill="white" opacity=".9"/>
+<text x="70" y="92" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#25233A">Send media</text>
+
+<rect x="60" y="180" width="960" height="170" rx="35" fill="white"/>
+<text x="100" y="245" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#25233A" text-anchor="start">Photos &amp; videos</text><text x="100" y="300" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#888496" text-anchor="start">Choose something to share</text>
+<rect x="70" y="420" width="290" height="220" rx="25" fill="url(#soft)"/><text x="215" y="555" font-family="Arial, sans-serif" font-size="60" font-weight="400" fill="#9B6DFF" text-anchor="middle">＋</text><rect x="390" y="420" width="290" height="220" rx="25" fill="url(#soft)"/><text x="535" y="555" font-family="Arial, sans-serif" font-size="60" font-weight="400" fill="#9B6DFF" text-anchor="middle">＋</text><rect x="710" y="420" width="290" height="220" rx="25" fill="url(#soft)"/><text x="855" y="555" font-family="Arial, sans-serif" font-size="60" font-weight="400" fill="#9B6DFF" text-anchor="middle">＋</text><rect x="70" y="670" width="290" height="220" rx="25" fill="url(#soft)"/><text x="215" y="805" font-family="Arial, sans-serif" font-size="60" font-weight="400" fill="#9B6DFF" text-anchor="middle">＋</text><rect x="390" y="670" width="290" height="220" rx="25" fill="url(#soft)"/><text x="535" y="805" font-family="Arial, sans-serif" font-size="60" font-weight="400" fill="#9B6DFF" text-anchor="middle">＋</text><rect x="710" y="670" width="290" height="220" rx="25" fill="url(#soft)"/><text x="855" y="805" font-family="Arial, sans-serif" font-size="60" font-weight="400" fill="#9B6DFF" text-anchor="middle">＋</text>
+
+<rect x="0" y="2250" width="1080" height="90" fill="white"/>
+<text x="70" y="2305" font-family="Arial" font-size="28" fill="#A4A1B4">Bunny</text>
+<circle cx="1010" cy="2290" r="14" fill="#FF6FAE"/>
+</svg>

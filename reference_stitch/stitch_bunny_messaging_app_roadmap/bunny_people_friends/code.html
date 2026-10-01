@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#a7391e", "surface-container": "#efecff", "surface-bright": "#fcf8ff", "on-error": "#ffffff", "surface-dim": "#dad8ef", "surface-container-low": "#f5f2ff", "tertiary-fixed-dim": "#4edea3", "inverse-on-surface": "#f2efff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#862208", "on-tertiary-container": "#00412b", "inverse-surface": "#2f2f41", "on-secondary": "#ffffff", "on-surface-variant": "#58423c", "primary-fixed": "#ffdad2", "on-primary-container": "#701500", "outline-variant": "#dfc0b8", "surface": "#fcf8ff", "surface-container-high": "#e8e6fe", "tertiary-container": "#0cb880", "on-secondary-container": "#fffbff", "background": "#fcf8ff", "error-container": "#ffdad6", "surface-variant": "#e3e0f8", "tertiary-fixed": "#6ffbbe", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-container": "#ff7a59", "on-tertiary-fixed": "#002113", "on-background": "#1a1a2b", "primary-fixed-dim": "#ffb4a2", "on-secondary-fixed": "#1c0062", "surface-container-highest": "#e3e0f8", "inverse-primary": "#ffb4a2", "secondary-container": "#7857f8", "secondary": "#5f3add", "primary": "#a7391e", "on-secondary-fixed-variant": "#4918c8", "on-tertiary-fixed-variant": "#005236", "secondary-fixed": "#e6deff", "on-error-container": "#93000a", "on-surface": "#1a1a2b", "tertiary": "#006c49", "outline": "#8b716b", "error": "#ba1a1a", "on-primary-fixed": "#3c0700", "secondary-fixed-dim": "#cabeff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter": "1rem", "gutter-mobile": "0.75rem", "space-md": "0.875rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-lg": "1.25rem", "margin": "1.25rem", "space-sm": "0.5rem", "margin-mobile": "1rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "800" }], "body-md": ["15px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Bunny App Icon" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Ull0OCgPXzrUp8FTlakK-4B7e2Ky2GB2a-J0L5_WJdjCUGWQRidQkSqX1DA88cVGXyPGOQvvboBWfVu6vi-IJ4-3jh47YowodR4iNI68P2MoCecmuQHGNdeULfl-YogXqvLpnlzAE5Hr0mEzCRs_A9AVMXu4jiYzzKoSnB9kr_9rnNdnbYly_Ya7Ou5UqPdxeTDHLAn_ySlcFxSMsI5uT-9-bkw1JcROA8esJ2HXLuNMUmHGXWAo8U0CI"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Bunny</span></div><div class="flex items-center gap-space-md"><span class="font-label-lg text-label-lg text-on-surface-variant font-semibold">Friends</span><div class="relative flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_rgba(30,30,47,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATkKgLqw87aNNkWuVkGLtBrGB_Qj-hlPmTMNHlaJVFGyUBJYJ2GjnmgYtzi7ZsD4iDdU8aCMri7QOJEcXKlab6uGBeqyX54dVpu3d3t9PRRVDlK8EI7VMLb1vjUEFdSRrT69UKKlHcL84mV9Hv1a0JjntSQ0LmWqEbClX9KmiCfCSRwn-4t5zY_LGv4RyaNvhgXj-P0hCCkWZ0lOBYFeQ0RNmGD6MSJC-RHK95-SnU2eQY4uIGyaFU"/><span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-tertiary-container rounded-full ring-2 ring-surface"></span></div></div></div></header><main class="flex-1 w-full bg-background px-gutter pt-16 pb-28"><div class="flex flex-col w-full pb-6 space-y-6">
+<!-- Search & QR Discovery Bar -->
+<div class="flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Friends &amp; Network</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Stay close, spark ideas, and hang out</p>
+</div>
+<button aria-label="My QR Code" class="relative flex items-center justify-center w-11 h-11 rounded-full bg-surface-container-high text-secondary hover:bg-secondary-fixed active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[24px]">qr_code_2</span>
+</button>
+</div>
+<div class="relative flex items-center w-full">
+<div class="absolute left-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-12 pl-11 pr-11 bg-surface-container-lowest rounded-full font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] transition-all" placeholder="Search by name or @username..." type="text"/>
+<button aria-label="Scan QR code" class="absolute right-2 flex items-center justify-center w-8 h-8 rounded-full bg-surface-container text-on-surface-variant hover:text-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">qr_code_scanner</span>
+</button>
+</div>
+</div>
+<!-- Section 1: Friend Requests -->
+<section class="flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Friend Requests</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-[0_2px_8px_rgba(167,57,30,0.25)]" id="requests-count">2</span>
+</div>
+<button class="font-label-md text-label-md text-secondary hover:underline">Batch view</button>
+</div>
+<div class="flex flex-col space-y-2.5" id="requests-container">
+<!-- Alex Rivera -->
+<div class="flex flex-col p-3.5 bg-surface-container-lowest rounded-DEFAULT shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] transition-all" id="request-alex">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Warm natural portrait of Alex Rivera, a young man smiling with friendly eyes, soft ambient lighting, modern aesthetic, high resolution photography with coral and warm studio tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDItqarWlntzmLIk-MEIPcTVGzxNRoE8D4hgLTqlAABdNUyRgPv56UYIOi9wEYuh1Q0PrlplUV3aHtN3okBfkLHQXsMOlio8I9qfq2bpoYIPguyBNtzygyx3fIz5Y4ZQzpUFafhjAUNKwqvHS474K9Xe-xi0aKKE8mMvL2K4I_utH6KmCwcs1uLkSeXMSVutmo2UDqTX-29zdcGYaVWl2diAbNN3Z_spDc30EYqZ8Nzh3R1haw3Ylyn"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Alex Rivera</span>
+<span class="font-label-sm text-label-sm text-outline">12m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">@alex_r</p>
+<div class="flex items-center gap-1.5 mt-1 text-secondary">
+<span class="material-symbols-outlined text-[15px]">group</span>
+<span class="font-label-sm text-label-sm">4 mutual friends</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-3 pt-1">
+<button class="flex-1 h-9 px-4 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_4px_14px_rgba(255,122,89,0.35)] active:scale-95 transition-all flex items-center justify-center gap-1" onclick="handleRequest('alex', 'accepted')">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Accept</span>
+</button>
+<button class="h-9 px-4 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant active:scale-95 transition-all" onclick="handleRequest('alex', 'declined')">
+            Decline
+          </button>
+</div>
+</div>
+<!-- Mia Tanaka -->
+<div class="flex flex-col p-3.5 bg-surface-container-lowest rounded-DEFAULT shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] transition-all" id="request-mia">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Charming portrait of Mia Tanaka, a creative Japanese designer with short stylish hair, playful warm smile, soft natural bokeh background with purple and coral pastel accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwbh6iS1qvL-9KJ87XWOlxoPFqoWNXtxa37R64Rw5NC_aSmWzhmnMADbXxdyvKjiDRN6CalLnsghZ4X77asDaskyVoNbElIsv5JWN7bcXofvyQX0S-H4rsJ2utbdQ4r1JQkugS0ia8YCxi_SGmnSmhetF4a5QCLZwBXBtXKVcUXOaJFz_WzKGBtVP03RKUs84NCAD2I4dcs32bjBRUPrkk04rH2F73JNW2oRhwRYaVWUjFjF-F2fa5"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Mia Tanaka</span>
+<span class="font-label-sm text-label-sm text-outline">1h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">@miatanaka</p>
+<div class="mt-1 p-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface">
+              “Hey! Met you at Figma Config ✨”
+            </div>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-3 pt-1">
+<button class="flex-1 h-9 px-4 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_4px_14px_rgba(255,122,89,0.35)] active:scale-95 transition-all flex items-center justify-center gap-1" onclick="handleRequest('mia', 'accepted')">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Accept</span>
+</button>
+<button class="h-9 px-4 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant active:scale-95 transition-all" onclick="handleRequest('mia', 'declined')">
+            Decline
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Quick Add & Suggestions -->
+<section class="flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_awesome</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Quick Add &amp; Suggestions</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Based on your circles</span>
+</div>
+<!-- Horizontal scroll suggestion rack -->
+<div class="flex gap-3 overflow-x-auto pb-2 pt-1 -mx-gutter px-gutter no-scrollbar">
+<!-- Card 1 -->
+<div class="shrink-0 w-44 p-3.5 bg-surface-container-lowest rounded-DEFAULT shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] flex flex-col items-center text-center relative group">
+<div class="relative mb-2">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="Portrait photo of Liam Chen, charismatic guy in knitted emerald sweater, joyful expression, soft sunny room background, clean studio style lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm7jBVLbsy1HtyAK0dT33CIYjnSS5vtTRPAKIj-9oJxJ6t1k9iX9Xn1y6bXoPYzyes8btWBw-Ufnsgg2wIzzDL7UhTcudWKER0T2EZbnmWC3jquQg9roLYRFuywzGt_cscct-K8MGbNsgzw88n3z0kNcq3Lwx6sxk5y_7CXTHq9VusDK6djwlskZ4T2BJ28M1zgar7nKKqsBINxsFfrO1fdcqCvwbKmXXqmrRD9KZ0gdJy8yQOBNN0"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface truncate w-full">Liam Chen</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate w-full">@chenliam</span>
+<div class="mt-2 mb-3 px-2 py-0.5 bg-surface-container-low rounded-full font-label-sm text-label-sm text-secondary truncate max-w-full">
+          Design Systems
+        </div>
+<button class="w-full h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant hover:bg-secondary-container hover:text-on-secondary font-label-md text-label-md transition-all flex items-center justify-center gap-1 active:scale-95" onclick="toggleQuickAdd(this)">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>+ Add</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="shrink-0 w-44 p-3.5 bg-surface-container-lowest rounded-DEFAULT shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] flex flex-col items-center text-center relative group">
+<div class="relative mb-2">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="Candid portrait of Sarah Jenkins, young woman with curly red hair and stylish spectacles, warm joyful vibe, studio portrait with warm earth tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAePm-838dhXYvEYAQkIMRjVmD8ydtO7g_K0KkbcfQF0hribuLS6qLrNGpf3GcYnA3h3eEMv-Pq7bAJJo2UxCW7G8zQzmyqLaNtGFnh0dMK0GOvwdQXSedYa8DKoSKLyuhMijQ6D0C6Way0Z_qHuubYHSYGp-bc2M4bY432OVDY10n5410cUEg7JpiDpbD8jANuaHwd34tY7MrgOfJJAngn3YhNUbgoJanhGkQ7-4mCEatZb5iCGhQl"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface truncate w-full">Sarah Jenkins</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate w-full">@sarahj</span>
+<div class="mt-2 mb-3 px-2 py-0.5 bg-surface-container-low rounded-full font-label-sm text-label-sm text-secondary truncate max-w-full">
+          Indie Music • Vinyl
+        </div>
+<button class="w-full h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant hover:bg-secondary-container hover:text-on-secondary font-label-md text-label-md transition-all flex items-center justify-center gap-1 active:scale-95" onclick="toggleQuickAdd(this)">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>+ Add</span>
+</button>
+</div>
+<!-- Card 3 -->
+<div class="shrink-0 w-44 p-3.5 bg-surface-container-lowest rounded-DEFAULT shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] flex flex-col items-center text-center relative group">
+<div class="relative mb-2">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="Portrait of Jordan Blake, creative artist with subtle warm smile, dressed in warm terracotta apparel, modern clean photo with gentle shadow play." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy8PnUibo2M3l7BlxYrrhnVQR9V2UAiA0Ydi6KUpl4gbffTo_BCe_NYg_iaSaneIARZ3fvW9dKch82tAAu-zl9MErZq6JeONyOO00l2VsTNUE-uSFRUr2GV9yjnV1VTXfs4x6n5TiD4hbu3bXR_9SysFB4ShtQeCF6OYjidzD3jbYLzELs64LNmtXU5kmBUWkNLA5iGD_g1hQRfSjc1s3CC4s4QId1o73VUzY0XpewMo_Nz2EN0zSw"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface truncate w-full">Jordan Blake</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate w-full">@blake_j</span>
+<div class="mt-2 mb-3 px-2 py-0.5 bg-surface-container-low rounded-full font-label-sm text-label-sm text-secondary truncate max-w-full">
+          Mobile Dev • AI
+        </div>
+<button class="w-full h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant hover:bg-secondary-container hover:text-on-secondary font-label-md text-label-md transition-all flex items-center justify-center gap-1 active:scale-95" onclick="toggleQuickAdd(this)">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>+ Add</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 3: All Friends & Filters -->
+<section class="flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">All Friends</h2>
+<span class="font-label-md text-label-md text-on-surface-variant">(48)</span>
+</div>
+<button class="font-label-md text-label-md text-secondary flex items-center gap-1">
+<span>A-Z</span>
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+</button>
+</div>
+<!-- Filter chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+<button class="h-8 px-4 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shrink-0 active:scale-95 shadow-sm">
+        All (48)
+      </button>
+<button class="h-8 px-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shrink-0 shadow-[0_2px_8px_rgba(30,30,47,0.04)] flex items-center gap-1.5 active:scale-95 hover:bg-surface-container">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>Online Now (14)</span>
+</button>
+<button class="h-8 px-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shrink-0 shadow-[0_2px_8px_rgba(30,30,47,0.04)] flex items-center gap-1 active:scale-95 hover:bg-surface-container">
+<span class="material-symbols-outlined text-[15px] text-primary">favorite</span>
+<span>Favorites (6)</span>
+</button>
+<button class="h-8 px-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shrink-0 shadow-[0_2px_8px_rgba(30,30,47,0.04)] flex items-center gap-1 active:scale-95 hover:bg-surface-container">
+<span class="material-symbols-outlined text-[15px] text-secondary">star</span>
+<span>Close Friends</span>
+</button>
+</div>
+<!-- Friends Directory List -->
+<div class="flex flex-col space-y-2 mt-1">
+<!-- Chloe Bennett (Alphabetical C) -->
+<div class="flex items-center justify-between p-3.5 bg-surface-container-lowest rounded-DEFAULT shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Close up warm profile image of Chloe Bennett, wearing soft pastel blue scarf, smiling naturally in London city street scenery with soft focus background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6v9zSXk9fhtBxiqJDUq27sfMoLVevE74bIMxvXOtE-MbmSpA2RhIqOWr0gbrwQm2fCfAiSeBqUO0T9RZL3vyeeOsD0otcuiKEM-3qMHoRMxJOtDI3r0ojTlJxNvt55CwX7pxHOVarRgKYKaWAc6Svff_K7BpQvpv0NQWb1PV0ODd4Rn2_dQoZe-WWD2ffgwjb_ZKpC06ZP1JNuMSR-vSaTrFsyIlpsjZ_EafPfIUx6aHRC8OKDPRh"/>
+<!-- Offline state: muted gray dot -->
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-surface-dim rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Chloe Bennett</span>
+<span class="font-label-sm text-label-sm text-outline shrink-0">• Offline</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">@chloeb</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 truncate">“Living in London 🇬🇧”</p>
+</div>
+</div>
+<button aria-label="Chat with Chloe" class="shrink-0 ml-2 w-10 h-10 rounded-full bg-surface-container text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-all flex items-center justify-center active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+</div>
+<!-- Noah Vance (Alphabetical N) -->
+<div class="flex items-center justify-between p-3.5 bg-surface-container-lowest rounded-DEFAULT shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait photo of Noah Vance, young creative guy wearing headphones around his neck, energetic warm expression, soft purple gaming room ambient rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKVSdHcmwkU5f0Z1tw3sQbwqXM_Azgdb4eRpYo3PGbk7wbTFh6B1IFkPfnEvo8Kqv6CWGcuYPBadhmHQcbnqAoY6o28rXfU2XnFIGzU2C8bYtbLQ4NQnyc1TyIMum7DwB_ih-13s-nXLiIAGsLepvbQ9E6e13gU2jwNXCGT1EOwl-WlVtQlw6b1gj575S8gGqeCEJoR-moL5oBFdtwlgK3qPs24ZmRWp5ohwDvdbFjyhdiD96hI72E"/>
+<!-- Recently active indicator -->
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-tertiary-fixed-dim rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Noah Vance</span>
+<span class="font-label-sm text-label-sm text-tertiary shrink-0">• Active 5m ago</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">@noahv</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 truncate">Gaming &amp; UI/UX</p>
+</div>
+</div>
+<button aria-label="Chat with Noah" class="shrink-0 ml-2 w-10 h-10 rounded-full bg-surface-container text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-all flex items-center justify-center active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+</div>
+<!-- Sophie Martin (Alphabetical S) -->
+<div class="flex items-center justify-between p-3.5 bg-surface-container-lowest rounded-DEFAULT shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Vibrant portrait of Sophie Martin sitting in a bright coffee shop, holding a ceramic latte cup, radiant smile, high key warm morning lighting with orange and beige accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR1K8LmRPTR4hxJMOLf2tHyWqdLFiOxTff7xqGszbQXj-77hrD6wk6F6B7ixDoyItouN5PvAnSSMrQnR2VcH7-hBTeyYRRizh_LFnsqYgtWwxZiCiT2hbIZIQkY0gH1qexkOlZHH9xTNFLMKlw_veUrT62N4ACj9diEh2no5ducGMkbpl8DliOUhZ3ErgpGPe85x7yzfjqsubJ7WMKlOOFe-9NeBByK4tZWB_AUV1qpXHacg27WlEz"/>
+<!-- Online status ping dot -->
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest shadow-[0_0_8px_rgba(12,184,128,0.7)]"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Sophie Martin</span>
+<span class="font-label-sm text-label-sm text-tertiary-container shrink-0 font-bold">• Online</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">@sophiem</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 truncate">“Coffee &amp; Code ☕”</p>
+</div>
+</div>
+<button aria-label="Chat with Sophie" class="shrink-0 ml-2 w-10 h-10 rounded-full bg-primary-container text-on-primary hover:bg-surface-tint transition-all flex items-center justify-center active:scale-95 shadow-[0_4px_12px_rgba(255,122,89,0.3)]">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Shareable Bunny Link Invite Banner -->
+<section class="relative overflow-hidden p-4 rounded-lg bg-gradient-to-br from-secondary-container to-secondary text-on-secondary shadow-[0_12px_36px_-4px_rgba(120,87,248,0.22)]">
+<div class="relative z-10 flex flex-col space-y-3">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest/20 backdrop-blur-md flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[22px]">link</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm leading-tight text-on-secondary">Invite Friends to Bunny</span>
+<span class="font-body-sm text-body-sm text-secondary-fixed">bunny.chat/u/yourhandle</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-secondary/90 leading-snug">
+        Share your personal invite link anywhere. Friends join instantly with zero awkward friction!
+      </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-10 px-4 rounded-full bg-surface-container-lowest text-secondary font-label-md text-label-md active:scale-95 transition-all flex items-center justify-center gap-1.5 shadow-sm" id="copy-btn" onclick="copyInviteLink()">
+<span class="material-symbols-outlined text-[18px]" id="copy-icon">content_copy</span>
+<span id="copy-text">Copy Invite Link</span>
+</button>
+<button aria-label="Share options" class="w-10 h-10 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-on-secondary hover:bg-surface-container-lowest/30 active:scale-95 transition-all flex items-center justify-center" onclick="shareLinkNative()">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<!-- Soft organic background glows inside card -->
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-tertiary-container/30 blur-2xl pointer-events-none"></div>
+<div class="absolute -left-6 -top-6 w-28 h-28 rounded-full bg-primary-container/30 blur-2xl pointer-events-none"></div>
+</section>
+</div>
+<script>
+  let pendingCount = 2;
+
+  function handleRequest(userKey, action) {
+    const card = document.getElementById('request-' + userKey);
+    const countBadge = document.getElementById('requests-count');
+    
+    if (!card) return;
+
+    card.classList.add('opacity-40', 'scale-95', 'pointer-events-none');
+    
+    setTimeout(() => {
+      card.remove();
+      pendingCount = Math.max(0, pendingCount - 1);
+      if (countBadge) {
+        countBadge.innerText = pendingCount;
+        if (pendingCount === 0) {
+          countBadge.classList.add('hidden');
+          const container = document.getElementById('requests-container');
+          if (container) {
+            container.innerHTML = `
+              <div class="p-4 bg-surface-container-lowest rounded-DEFAULT text-center shadow-sm">
+                <span class="material-symbols-outlined text-tertiary-container text-[28px] mb-1">done_all</span>
+                <p class="font-label-lg text-label-lg text-on-surface">All caught up!</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">No pending friend requests right now.</p>
+              </div>
+            `;
+          }
+        }
+      }
+    }, 240);
+  }
+
+  function toggleQuickAdd(btn) {
+    if (btn.dataset.added === 'true') {
+      btn.dataset.added = 'false';
+      btn.className = 'w-full h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant hover:bg-secondary-container hover:text-on-secondary font-label-md text-label-md transition-all flex items-center justify-center gap-1 active:scale-95';
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">person_add</span><span>+ Add</span>';
+    } else {
+      btn.dataset.added = 'true';
+      btn.className = 'w-full h-8 rounded-full bg-tertiary-container text-on-tertiary font-label-md text-label-md transition-all flex items-center justify-center gap-1 active:scale-95 shadow-sm';
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Requested</span>';
+    }
+  }
+
+  function copyInviteLink() {
+    const textEl = document.getElementById('copy-text');
+    const iconEl = document.getElementById('copy-icon');
+    
+    if (textEl && iconEl) {
+      const originalText = textEl.innerText;
+      textEl.innerText = 'Copied to Clipboard!';
+      iconEl.innerText = 'check';
+
+      navigator.clipboard?.writeText('https://bunny.chat/u/yourhandle');
+
+      setTimeout(() => {
+        textEl.innerText = originalText;
+        iconEl.innerText = 'content_copy';
+      }, 2000);
+    }
+  }
+
+  function shareLinkNative() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Join me on Bunny!',
+        text: 'Let\'s connect and chat on Bunny.',
+        url: 'https://bunny.chat/u/yourhandle',
+      }).catch(() => {});
+    } else {
+      copyInviteLink();
+    }
+  }
+</script></main><div class="fixed bottom-0 w-full z-50 pointer-events-none pb-safe"><div class="px-gutter pb-space-sm pt-space-xs"><nav class="pointer-events-auto mx-auto max-w-md bg-surface-container-lowest/85 backdrop-blur-2xl rounded-full p-space-xs shadow-[0_12px_36px_-4px_rgba(120,87,248,0.16)] flex items-center justify-between" data-active-classes="bg-primary-container text-on-primary shadow-[0_4px_14px_rgba(255,122,89,0.35)]"><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="chats" href="#"><span class="material-symbols-outlined text-[22px]">chat_bubble</span><span class="font-label-sm text-label-sm mt-0.5">Chats</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all active:scale-95 bg-primary-container text-on-primary shadow-[0_4px_14px_rgba(255,122,89,0.35)]" data-path="friends" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm mt-0.5">Friends</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="discover" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-sm text-label-sm mt-0.5">Discover</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></nav></div></div></body></html>

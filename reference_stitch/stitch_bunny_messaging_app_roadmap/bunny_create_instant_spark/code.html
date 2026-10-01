@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#a7391e", "surface-container": "#efecff", "surface-bright": "#fcf8ff", "on-error": "#ffffff", "surface-dim": "#dad8ef", "surface-container-low": "#f5f2ff", "tertiary-fixed-dim": "#4edea3", "inverse-on-surface": "#f2efff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#862208", "on-tertiary-container": "#00412b", "inverse-surface": "#2f2f41", "on-secondary": "#ffffff", "on-surface-variant": "#58423c", "primary-fixed": "#ffdad2", "on-primary-container": "#701500", "outline-variant": "#dfc0b8", "surface": "#fcf8ff", "surface-container-high": "#e8e6fe", "tertiary-container": "#0cb880", "on-secondary-container": "#fffbff", "background": "#fcf8ff", "error-container": "#ffdad6", "surface-variant": "#e3e0f8", "tertiary-fixed": "#6ffbbe", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-container": "#ff7a59", "on-tertiary-fixed": "#002113", "on-background": "#1a1a2b", "primary-fixed-dim": "#ffb4a2", "on-secondary-fixed": "#1c0062", "surface-container-highest": "#e3e0f8", "inverse-primary": "#ffb4a2", "secondary-container": "#7857f8", "secondary": "#5f3add", "primary": "#a7391e", "on-secondary-fixed-variant": "#4918c8", "on-tertiary-fixed-variant": "#005236", "secondary-fixed": "#e6deff", "on-error-container": "#93000a", "on-surface": "#1a1a2b", "tertiary": "#006c49", "outline": "#8b716b", "error": "#ba1a1a", "on-primary-fixed": "#3c0700", "secondary-fixed-dim": "#cabeff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter": "1rem", "gutter-mobile": "0.75rem", "space-md": "0.875rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-lg": "1.25rem", "margin": "1.25rem", "space-sm": "0.5rem", "margin-mobile": "1rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "800" }], "body-md": ["15px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back to Chats" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface bg-surface-container-lowest/80 active:scale-95 transition-transform shadow-[0_2px_8px_rgba(30,30,47,0.04)]" onclick="window.location.hash='chats'||history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Active Sparks</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Search Sparks" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface bg-surface-container-lowest/80 active:scale-95 transition-transform shadow-[0_2px_8px_rgba(30,30,47,0.04)]"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Post a Spark" class="w-11 h-11 flex items-center justify-center rounded-full text-on-primary bg-primary-container active:scale-95 transition-transform shadow-[0_4px_14px_rgba(255,122,89,0.35)]"><span class="material-symbols-outlined text-[22px]">photo_camera</span></button></div></div></header><main class="flex-1 w-full bg-background px-gutter pt-16 pb-safe"><div class="flex flex-col w-full pb-8">
+<!-- Interactive Composer Sheet Container -->
+<div class="w-full flex flex-col pt-space-xs">
+<!-- Top Pull Handle & Micro Bar -->
+<div class="flex flex-col items-center w-full mb-space-sm">
+<div class="w-12 h-1.5 rounded-full bg-surface-dim"></div>
+</div>
+<!-- Header Block -->
+<div class="flex items-start justify-between w-full mb-space-md">
+<div class="flex flex-col min-w-0 pr-space-sm">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-primary-fixed to-secondary-fixed text-on-primary-fixed-variant w-fit mb-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-extrabold text-on-primary-container">Instant Spark</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Spark Something Spontaneous</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Share a live thought, audio memo, activity radar, or mood vibe with friends.</p>
+</div>
+<button aria-label="Dismiss Sheet" class="flex-shrink-0 w-9 h-9 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center active:scale-95 transition-transform shadow-sm" onclick="window.history.back()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Spark Type Interactive Segmented Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 mb-space-md">
+<button class="spark-tab flex-shrink-0 inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-secondary-container text-on-secondary shadow-md active:scale-95 transition-all" id="tab-thought" onclick="switchSparkType('thought')">
+<span class="text-[15px]">💭</span>
+<span class="font-label-lg text-label-lg font-bold">Quick Thought</span>
+</button>
+<button class="spark-tab flex-shrink-0 inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface active:scale-95 transition-all" id="tab-voice" onclick="switchSparkType('voice')">
+<span class="text-[15px]">🎙️</span>
+<span class="font-label-lg text-label-lg font-bold">Voice Pulse</span>
+</button>
+<button class="spark-tab flex-shrink-0 inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface active:scale-95 transition-all" id="tab-radar" onclick="switchSparkType('radar')">
+<span class="text-[15px]">📍</span>
+<span class="font-label-lg text-label-lg font-bold">Nearby Radar</span>
+</button>
+<button class="spark-tab flex-shrink-0 inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface active:scale-95 transition-all" id="tab-snap" onclick="switchSparkType('snap')">
+<span class="text-[15px]">📸</span>
+<span class="font-label-lg text-label-lg font-bold">Instant Snap</span>
+</button>
+</div>
+<!-- Composer Card -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-space-md shadow-xl flex flex-col relative overflow-hidden mb-space-md">
+<!-- Glow ambient gradient top corner -->
+<div class="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-gradient-to-br from-primary-fixed via-secondary-fixed to-transparent opacity-60 blur-2xl pointer-events-none"></div>
+<!-- User Context Bar -->
+<div class="flex items-center justify-between relative z-10 mb-space-sm">
+<div class="flex items-center gap-2.5">
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-cover bg-center ring-2 ring-primary-container/20" data-alt="Portrait photo of Maya Lin with a cheerful smile, natural lighting, modern warm creator aesthetic with soft lilac and coral background highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHksWJLDGVZpRW-apTx1qYgDBMfK8FXZ2YREXK6UHopbwflakiEDQl16gINNW1dNCa0Js7n82Uf5qNHV8VRfJ5KYkM3aEucNSIe7laq6isKCAIAGFjlakDXy3-3bEqQSEiWWipLtPdlGpyRDOHdF0hArikNxxRhsExp3mtED73jZvJXmalWyQ7ylqcTNb3cqsc0CpfgPTODieG6s0rGXa9BvryJme5yJ0rbhBmYB_uNllsBdjOhLsH')"></div>
+<div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-tertiary-container shadow-[0_0_0_2px_#ffffff,0_0_8px_rgba(12,184,128,0.7)] flex items-center justify-center">
+<span class="block w-1.5 h-1.5 rounded-full bg-on-tertiary"></span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Posting as Maya</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Live in Brooklyn, NY</span>
+</div>
+</div>
+<!-- Audience Selector Dropdown Pill -->
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">group</span>
+<span class="font-label-md text-label-md font-bold">Friends &amp; Mutuals (48)</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">expand_more</span>
+</button>
+</div>
+<!-- Main Textarea -->
+<div class="relative z-10 w-full mt-1">
+<textarea class="w-full bg-transparent resize-none font-body-lg text-body-lg text-on-surface placeholder:text-outline-variant focus:outline-none leading-relaxed" id="spark-input" maxlength="140" oninput="updateCharCount(this)" placeholder="What's sparkling on your mind? (e.g., Grabbing matcha at Soho, working on new tokens, anyone free to audio jump?)..." rows="3"></textarea>
+</div>
+<!-- Live Lifespan & Word Count Tracker -->
+<div class="flex items-center justify-between py-1 relative z-10">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-primary-container">timer</span>
+<span class="font-label-md text-label-md font-semibold">18h lifespan</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-md text-label-md text-tertiary font-bold flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+            Instant broadcast
+          </span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium" id="char-counter">0 / 140</span>
+</div>
+<!-- Mood & Activity Chips Selector (Scrollable) -->
+<div class="pt-space-xs pb-space-xs relative z-10">
+<div class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider font-bold mb-1.5">Attach Current Vibe</div>
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+<button class="vibe-chip flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold active:scale-95 transition-all shadow-sm" onclick="toggleVibe(this, '☕ Café Hopper')" type="button">
+<span>☕</span>
+<span>Café Hopper</span>
+</button>
+<button class="vibe-chip flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold active:scale-95 transition-all" onclick="toggleVibe(this, '🎧 Deep Focus')" type="button">
+<span>🎧</span>
+<span>Deep Focus</span>
+</button>
+<button class="vibe-chip flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold active:scale-95 transition-all" onclick="toggleVibe(this, '✨ In Design Mode')" type="button">
+<span>✨</span>
+<span>In Design Mode</span>
+</button>
+<button class="vibe-chip flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold active:scale-95 transition-all" onclick="toggleVibe(this, '🎮 Gaming')" type="button">
+<span>🎮</span>
+<span>Gaming</span>
+</button>
+<button class="vibe-chip flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold active:scale-95 transition-all" onclick="toggleVibe(this, '🏃 Quick Run')" type="button">
+<span>🏃</span>
+<span>Quick Run</span>
+</button>
+</div>
+</div>
+<!-- Micro Rich Add-ons Bar -->
+<div class="mt-space-sm pt-space-sm bg-surface-container-low/70 rounded-md p-2.5 flex items-center justify-between relative z-10">
+<div class="flex items-center gap-2">
+<!-- Voice Note Button -->
+<button class="h-8 px-2.5 rounded-full bg-surface-container-lowest text-on-surface hover:text-primary flex items-center gap-1.5 active:scale-95 transition-all shadow-sm" id="voice-memo-btn" onclick="toggleAudioRecord()">
+<span class="material-symbols-outlined text-[17px] text-primary-container">mic</span>
+<span class="font-label-md text-label-md font-bold">Voice Note</span>
+</button>
+<!-- Music Tag -->
+<button class="h-8 px-2.5 rounded-full bg-surface-container-lowest text-on-surface flex items-center gap-1.5 active:scale-95 transition-all shadow-sm" onclick="toggleTag(this, '🎵 Late Night Lo-fi')">
+<span class="material-symbols-outlined text-[16px] text-secondary">music_note</span>
+<span class="font-label-md text-label-md font-semibold truncate max-w-[85px]">Lo-fi</span>
+</button>
+<!-- Location Tag -->
+<button class="h-8 px-2.5 rounded-full bg-surface-container-lowest text-on-surface flex items-center gap-1.5 active:scale-95 transition-all shadow-sm" onclick="toggleTag(this, '📍 Soho, NY')">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">location_on</span>
+<span class="font-label-md text-label-md font-semibold truncate max-w-[80px]">Soho, NY</span>
+</button>
+</div>
+<button aria-label="Add sticker or interactive poll" class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface flex items-center justify-center active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add_reaction</span>
+</button>
+</div>
+<!-- Live Voice Waveform Active Preview (Hidden State Ready to Toggle) -->
+<div class="hidden mt-space-xs p-2.5 bg-secondary-fixed/50 rounded-md flex items-center justify-between" id="audio-wave-preview">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed font-bold">0:07 Recording...</span>
+<div class="flex items-center gap-0.5 h-4 ml-1">
+<span class="w-1 bg-secondary rounded-full h-2 animate-pulse"></span>
+<span class="w-1 bg-secondary rounded-full h-4 animate-pulse delay-75"></span>
+<span class="w-1 bg-secondary rounded-full h-3 animate-pulse delay-150"></span>
+<span class="w-1 bg-secondary rounded-full h-5 animate-pulse"></span>
+<span class="w-1 bg-secondary rounded-full h-2 animate-pulse delay-100"></span>
+</div>
+</div>
+<button class="font-label-sm text-label-sm text-error font-bold px-2 py-0.5 rounded-full bg-surface-container-lowest shadow-sm" onclick="toggleAudioRecord()">Discard</button>
+</div>
+</div>
+<!-- Audience & Privacy Quick-Toggles -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-space-md shadow-md flex flex-col gap-3 mb-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-[20px]">rss_feed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Broadcast to Sparks Feed</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Visible in friends' top live bubble stream</span>
+</div>
+</div>
+<!-- Toggle Pill Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container shadow-inner"></div>
+</label>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Ping Close Friends (4)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct whisper notification</span>
+</div>
+</div>
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-secondary text-on-secondary">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Spark Duration</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Auto-cleans from active radar</span>
+</div>
+</div>
+<span class="font-label-md text-label-md font-bold px-3 py-1 rounded-full bg-surface-container text-on-surface">24 Hours (Standard)</span>
+</div>
+</div>
+<!-- Live Spark Preview & Friends Radar Sneak Peek -->
+<div class="w-full bg-gradient-to-r from-secondary-fixed/40 via-surface-container-high/40 to-primary-fixed/30 rounded-lg p-space-md shadow-sm mb-space-lg flex items-center gap-space-md">
+<!-- Animated Avatar Bubble Preview -->
+<div class="relative flex-shrink-0">
+<div class="w-13 h-13 w-12 h-12 rounded-full p-0.5 bg-gradient-to-tr from-primary-container via-secondary to-tertiary-container shadow-md">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Portrait closeup avatar of a girl with stylish hair and glowing expression matching the Maya user avatar." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUuBVVT_5LGHeGDjt4uQ0-pR2xIZV1r5xNeoaSGCMK20Cd9q_KdSiLhOBkXtTK24y-LxSqu1BMv7a_ZgTPzHHGMzqkxSkh55axYxIZJdBAyyoWrrLXaJAw6Znx7R_BbyJjhjsjDaKf7duTbZmLLkmKpRhf0S4YOSde0vbsEat2S0s9gYpv3zXga47kjyBUQQMg5teL1Q5TzTkPfAq1kiw8sGiWNYCYjbY32MTkvYoB2bRPz8m07vTE')"></div>
+</div>
+<div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[12px] font-extrabold">bolt</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface">Radar Preview</span>
+<span class="font-label-sm text-label-sm text-tertiary font-extrabold uppercase">• Live pulse</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Your Spark alerts Sophie, Liam, and 12 nearby friends instantly.</p>
+</div>
+</div>
+<!-- Action Dock (Bottom Bar) -->
+<div class="w-full flex items-center gap-space-sm pt-space-xs">
+<button class="w-1/3 py-3.5 px-space-md rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg font-bold text-center active:scale-95 transition-all shadow-sm" onclick="handleDraft()">
+        Save Draft
+      </button>
+<button class="flex-1 py-3.5 px-space-lg rounded-full bg-gradient-to-r from-primary-container via-primary-container to-secondary-container text-on-primary font-headline-sm text-headline-sm font-bold shadow-[0_6px_22px_rgba(255,122,89,0.38)] active:scale-95 transition-all flex items-center justify-center gap-2 group" id="post-spark-btn" onclick="handlePostSpark()">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:rotate-12 group-hover:scale-110" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>Post Instant Spark</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function switchSparkType(type) {
+    const tabs = ['thought', 'voice', 'radar', 'snap'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-' + t);
+      if (t === type) {
+        btn.className = "spark-tab flex-shrink-0 inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-secondary-container text-on-secondary shadow-md active:scale-95 transition-all";
+      } else {
+        btn.className = "spark-tab flex-shrink-0 inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface active:scale-95 transition-all";
+      }
+    });
+
+    const textarea = document.getElementById('spark-input');
+    if (type === 'voice') {
+      toggleAudioRecord(true);
+    } else if (type === 'radar') {
+      textarea.value = "📍 Hanging out around Soho Coffee Roasters for the next 2 hours! Free for catchups.";
+      updateCharCount(textarea);
+    } else if (type === 'snap') {
+      textarea.placeholder = "Add a quick caption for your Instant Snap...";
+    } else {
+      textarea.placeholder = "What's sparkling on your mind? (e.g., Grabbing matcha at Soho, working on new tokens, anyone free to jump on audio?)...";
+    }
+  }
+
+  function updateCharCount(el) {
+    const counter = document.getElementById('char-counter');
+    counter.innerText = el.value.length + " / 140";
+    if (el.value.length >= 130) {
+      counter.classList.add('text-primary');
+      counter.classList.remove('text-on-surface-variant');
+    } else {
+      counter.classList.remove('text-primary');
+      counter.classList.add('text-on-surface-variant');
+    }
+  }
+
+  function toggleVibe(button, vibeName) {
+    const allChips = document.querySelectorAll('.vibe-chip');
+    allChips.forEach(chip => {
+      chip.className = "vibe-chip flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold active:scale-95 transition-all";
+    });
+    button.className = "vibe-chip flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold active:scale-95 transition-all shadow-sm";
+  }
+
+  function toggleAudioRecord(forceOpen) {
+    const wave = document.getElementById('audio-wave-preview');
+    if (forceOpen || wave.classList.contains('hidden')) {
+      wave.classList.remove('hidden');
+    } else {
+      wave.classList.add('hidden');
+    }
+  }
+
+  function toggleTag(btn, label) {
+    if (btn.classList.contains('bg-primary-fixed')) {
+      btn.classList.remove('bg-primary-fixed', 'text-on-primary-fixed');
+      btn.classList.add('bg-surface-container-lowest', 'text-on-surface');
+    } else {
+      btn.classList.add('bg-primary-fixed', 'text-on-primary-fixed');
+      btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+    }
+  }
+
+  function handleDraft() {
+    const btn = event.currentTarget;
+    const oldText = btn.innerText;
+    btn.innerText = "Draft Saved ✓";
+    setTimeout(() => { btn.innerText = oldText; }, 1800);
+  }
+
+  function handlePostSpark() {
+    const postBtn = document.getElementById('post-spark-btn');
+    postBtn.innerHTML = "<span class='material-symbols-outlined text-[20px] animate-spin'>progress_activity</span><span>Broadcasting...</span>";
+    setTimeout(() => {
+      postBtn.innerHTML = "<span class='material-symbols-outlined text-[20px]'>done_all</span><span>Spark Live!</span>";
+      postBtn.classList.remove('bg-gradient-to-r', 'from-primary-container', 'via-primary-container', 'to-secondary-container');
+      postBtn.classList.add('bg-tertiary-container');
+      setTimeout(() => {
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.hash = 'chats';
+        }
+      }, 700);
+    }, 900);
+  }
+</script></main></body></html>

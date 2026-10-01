@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="2340" viewBox="0 0 1080 2340">
+<defs>
+  <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF6FAE"/><stop offset="1" stop-color="#9B7BFF"/></linearGradient>
+  <linearGradient id="soft" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF0F7"/><stop offset="1" stop-color="#F0EDFF"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-opacity=".10"/></filter>
+</defs>
+<rect width="1080" height="2340" rx="48" fill="#F8F7FC"/>
+<rect x="0" y="0" width="1080" height="150" fill="white" opacity=".9"/>
+<text x="70" y="92" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#25233A">Choose username</text>
+
+<text x="80" y="280" font-family="Arial, sans-serif" font-size="52" font-weight="800" fill="#25233A" text-anchor="start">Pick your @username</text>
+<text x="80" y="345" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#77748A" text-anchor="start">Friends can find you using this unique name.</text>
+<rect x="80" y="480" width="920" height="125" rx="28" fill="white" stroke="#E5E2EC" stroke-width="3"/>
+<text x="125" y="558" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#A09CAC" text-anchor="start">@yourusername</text>
+<circle cx="920" cy="542" r="27" fill="#D9F7E7"/><text x="920" y="553" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#2CA66A" text-anchor="middle">✓</text>
+<rect x="80" y="680" width="920" height="120" rx="60" fill="url(#pink)"/>
+<text x="540" y="755" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="white" text-anchor="middle">Continue</text>
+
+<rect x="0" y="2250" width="1080" height="90" fill="white"/>
+<text x="70" y="2305" font-family="Arial" font-size="28" fill="#A4A1B4">Bunny</text>
+<circle cx="1010" cy="2290" r="14" fill="#FF6FAE"/>
+</svg>

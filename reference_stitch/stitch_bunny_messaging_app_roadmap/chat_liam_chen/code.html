@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#a7391e", "surface-container": "#efecff", "surface-bright": "#fcf8ff", "on-error": "#ffffff", "surface-dim": "#dad8ef", "surface-container-low": "#f5f2ff", "tertiary-fixed-dim": "#4edea3", "inverse-on-surface": "#f2efff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#862208", "on-tertiary-container": "#00412b", "inverse-surface": "#2f2f41", "on-secondary": "#ffffff", "on-surface-variant": "#58423c", "primary-fixed": "#ffdad2", "on-primary-container": "#701500", "outline-variant": "#dfc0b8", "surface": "#fcf8ff", "surface-container-high": "#e8e6fe", "tertiary-container": "0cb880", "on-secondary-container": "#fffbff", "background": "#fcf8ff", "error-container": "#ffdad6", "surface-variant": "#e3e0f8", "tertiary-fixed": "#6ffbbe", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-container": "#ff7a59", "on-tertiary-fixed": "#002113", "on-background": "#1a1a2b", "primary-fixed-dim": "#ffb4a2", "on-secondary-fixed": "#1c0062", "surface-container-highest": "#e3e0f8", "inverse-primary": "#ffb4a2", "secondary-container": "#7857f8", "secondary": "#5f3add", "primary": "#a7391e", "on-secondary-fixed-variant": "#4918c8", "on-tertiary-fixed-variant": "#005236", "secondary-fixed": "#e6deff", "on-error-container": "#93000a", "on-surface": "#1a1a2b", "tertiary": "#006c49", "outline": "#8b716b", "error": "#ba1a1a", "on-primary-fixed": "#3c0700", "secondary-fixed-dim": "#cabeff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter": "1rem", "gutter-mobile": "0.75rem", "space-md": "0.875rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-lg": "1.25rem", "margin": "1.25rem", "space-sm": "0.5rem", "margin-mobile": "1rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "800" }], "body-md": ["15px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface bg-surface-container-lowest/80 active:scale-95 transition-transform shadow-[0_2px_8px_rgba(30,30,47,0.04)]" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span></button><img alt="Bunny App Icon" class="h-7 w-auto object-contain hidden sm:block" src="https://lh3.googleusercontent.com/aida/AEtjO1Ull0OCgPXzrUp8FTlakK-4B7e2Ky2GB2a-J0L5_WJdjCUGWQRidQkSqX1DA88cVGXyPGOQvvboBWfVu6vi-IJ4-3jh47YowodR4iNI68P2MoCecmuQHGNdeULfl-YogXqvLpnlzAE5Hr0mEzCRs_A9AVMXu4jiYzzKoSnB9kr_9rnNdnbYly_Ya7Ou5UqPdxeTDHLAn_ySlcFxSMsI5uT-9-bkw1JcROA8esJ2HXLuNMUmHGXWAo8U0CI"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Conversation Detail</h1></div><div class="flex items-center gap-space-sm"><button aria-label="More options" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface active:scale-95 transition-transform"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_rgba(30,30,47,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATkKgLqw87aNNkWuVkGLtBrGB_Qj-hlPmTMNHlaJVFGyUBJYJ2GjnmgYtzi7ZsD4iDdU8aCMri7QOJEcXKlab6uGBeqyX54dVpu3d3t9PRRVDlK8EI7VMLb1vjUEFdSRrT69UKKlHcL84mV9Hv1a0JjntSQ0LmWqEbClX9KmiCfCSRwn-4t5zY_LGv4RyaNvhgXj-P0hCCkWZ0lOBYFeQ0RNmGD6MSJC-RHK95-SnU2eQY4uIGyaFU"/></div></div></header><main class="flex-1 w-full bg-background px-gutter pt-16 pb-safe"><div class="flex flex-col w-full pb-6">
+<!-- Active Chat Partner Bar -->
+<section class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-lg shadow-sm mb-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex-shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Portrait photo of Liam Chen, a warm and friendly young Asian designer smiling softly in natural indoor studio lighting, wearing a stylish terracotta knit sweater with soft bokeh background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5tCXeI2P6W7sbYAOGu4aayL4uXnlcvwq4iLxp6SNkEkr1uzn_rIXeR6swg_lnCC7qXrIXF4XlhFLq1YCCVLVe_6QMdFaafbqGqU3Nhz6o0Wflvfzf7UQglKsQkWpscLdCAwiTqAdTEceGPqicIo-bcWGGStpo759WtgQf6mbC3LiCJNI0sco0Z5ElaWTm1gjSWmrT-65rPEg3ulSr9lxf83sbhuiAn2sFcFuNZJY7Q4NSLWk3CUWw"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-tertiary rounded-full ring-2 ring-surface-container-lowest"></span>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-tertiary rounded-full animate-ping opacity-75"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Liam Chen</h2>
+<span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<p class="font-label-sm text-label-sm text-tertiary font-semibold truncate">Active now <span class="text-on-surface-variant font-normal">• Typing...</span></p>
+</div>
+</div>
+</div>
+<!-- Quick Call Actions -->
+<div class="flex items-center gap-1 flex-shrink-0">
+<button aria-label="Start voice call" class="w-9 h-9 flex items-center justify-center rounded-full bg-surface-container text-secondary hover:bg-secondary-container hover:text-on-secondary-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</button>
+<button aria-label="Start video call" class="w-9 h-9 flex items-center justify-center rounded-full bg-surface-container text-secondary hover:bg-secondary-container hover:text-on-secondary-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">videocam</span>
+</button>
+<button aria-label="Conversation details" class="w-9 h-9 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">info</span>
+</button>
+</div>
+</section>
+<!-- Chat Timeline Stream -->
+<div class="flex flex-col gap-space-md mb-4" id="chatStream">
+<!-- Day Timestamp Chip -->
+<div class="flex justify-center my-1">
+<span class="font-label-md text-label-md px-3 py-1 bg-surface-container text-on-surface-variant rounded-full shadow-sm">
+        Today, 10:42 AM
+      </span>
+</div>
+<!-- 1. Incoming Message: Liam -->
+<div class="flex items-end gap-2 max-w-[85%] self-start">
+<img class="w-7 h-7 rounded-full object-cover flex-shrink-0 mb-1 shadow-sm" data-alt="Close-up avatar thumbnail of Liam Chen with soft smiling expression and warm natural ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ZCg7px6l7VP5Hzr9-g87ojcg_z1BZz5CYQIoC6chnYbsBmVrMd3NwFoJNTkgIzvqMcpIWjmr9QUlOINc48nEdtgOtGpsGqBQzib6bUqXOSe4PDmJH02Txo7yKUBfGLzbGsIVuQvnOA-kwXsa0gap2B5aiy1a6a-q17l8xx_UOJhNwZy4lna3dWO16pb4wdjfKuNFNUyGKr-xfHlDxROBA1XVM1Vdpv2wgyOOZLpXus7_C3A2HrHb"/>
+<div class="flex flex-col items-start gap-1">
+<div class="bg-surface-container-high text-on-surface px-4 py-3 rounded-2xl rounded-bl-sm shadow-sm">
+<p class="font-body-md text-body-md leading-relaxed">Hey Maya! Did you get a chance to review the new Bunny mobile flow?</p>
+</div>
+<span class="font-label-sm text-label-sm text-outline px-1">10:42 AM</span>
+</div>
+</div>
+<!-- 2. Outgoing Message: Maya -->
+<div class="flex flex-col items-end gap-1 max-w-[85%] self-end">
+<div class="bg-primary-container text-on-primary-container px-4 py-3 rounded-2xl rounded-br-sm shadow-sm bg-gradient-to-r from-primary-container to-[#ff9073]">
+<p class="font-body-md text-body-md text-white font-medium leading-relaxed">Yes! Loving the warm radiant color palette and the micro-interactions 😍</p>
+</div>
+<div class="flex items-center gap-1 px-1">
+<span class="font-label-sm text-label-sm text-outline">10:43 AM</span>
+<span class="material-symbols-outlined text-[16px] text-secondary" title="Seen">done_all</span>
+</div>
+</div>
+<!-- 3. Outgoing Voice Note: Maya -->
+<div class="flex flex-col items-end gap-1 max-w-[85%] self-end">
+<div class="bg-primary-container text-white px-4 py-3 rounded-2xl rounded-br-sm shadow-sm bg-gradient-to-r from-primary-container to-[#ff8566] w-64">
+<div class="flex items-center gap-3">
+<button aria-label="Play voice note" class="w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/30 active:scale-90 transition-all flex-shrink-0" id="voicePlayBtn" onclick="togglePlayAudio()">
+<span class="material-symbols-outlined text-[22px]" id="voiceIcon">play_arrow</span>
+</button>
+<div class="flex-1 flex flex-col gap-1.5">
+<!-- Simulated Waveform Bars -->
+<div class="flex items-center gap-0.5 h-6">
+<span class="w-1 bg-white rounded-full h-3"></span>
+<span class="w-1 bg-white rounded-full h-5"></span>
+<span class="w-1 bg-white rounded-full h-4"></span>
+<span class="w-1 bg-white rounded-full h-2"></span>
+<span class="w-1 bg-white/50 rounded-full h-6 animate-pulse"></span>
+<span class="w-1 bg-white/50 rounded-full h-3"></span>
+<span class="w-1 bg-white/50 rounded-full h-5"></span>
+<span class="w-1 bg-white/50 rounded-full h-4"></span>
+<span class="w-1 bg-white/50 rounded-full h-2"></span>
+<span class="w-1 bg-white/40 rounded-full h-4"></span>
+<span class="w-1 bg-white/40 rounded-full h-6"></span>
+<span class="w-1 bg-white/40 rounded-full h-3"></span>
+<span class="w-1 bg-white/40 rounded-full h-2"></span>
+<span class="w-1 bg-white/30 rounded-full h-4"></span>
+<span class="w-1 bg-white/30 rounded-full h-1"></span>
+</div>
+<div class="flex justify-between items-center text-white/80">
+<span class="font-label-sm text-label-sm font-semibold">0:18</span>
+<span class="font-label-sm text-label-sm">Voice note</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 px-1">
+<span class="font-label-sm text-label-sm text-outline">10:44 AM</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">done_all</span>
+</div>
+</div>
+<!-- 4. Incoming Media Card / Bunny Snapshot: Liam -->
+<div class="flex items-end gap-2 max-w-[85%] self-start">
+<img class="w-7 h-7 rounded-full object-cover flex-shrink-0 mb-1 shadow-sm" data-alt="Liam Chen portrait avatar thumbnail in soft morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMmt5Y34fiDM4LrPWgj7UxJpDWWxCA6KiQTntr8TipPPxULU_RkA1w1lqRJXkgwvqCKYsRMnpiqMbfoowiOQlxGCd0lInRLe96LTEbwENDhFDsCw_Cru2vNzr1JaHHt-74RQsy8mNgpbKmOGbL5tnj7l3t7WL5ZD0UQXCV8fo4vSQhYD9X_xyt7IuJ2EHI5LPLhe33Bcny8c0X_DVvIMrVgX_CZtRVsWegaasGVFvZtkV7IZgxQRty"/>
+<div class="flex flex-col items-start gap-1">
+<div class="relative bg-surface-container-high rounded-2xl rounded-bl-sm p-1.5 shadow-sm overflow-visible">
+<div class="overflow-hidden rounded-xl bg-surface-container">
+<img class="w-56 h-48 object-cover" data-alt="Playful 3D stylized cute bunny mascot floating playfully in a sunny pastel gradient room, holding a glowing coral heart balloon, modern render with claymorphism aesthetic and gentle peach and lavender reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdxx7wdQfOS9vinCIc1c5AiUeZKLvapRBrNPKwmwYBgA_D36HypYj-XENribGnninZhXYBK2WCc13G8a_Wse6In8XuE6s4qJyac3HTUqV2OqN6qLvdDXe1C--Q738bnvEA--J4jRg8vQ2bFjcITm2g4l3YJ4oj56dCtVQ2pu01jrcOieZaProrm09usLrR5A_HnGepLNSboiSjLfXWbkYVazojvtkR1qPNb6eAEbgm1M88Uluqjmuh"/>
+</div>
+<div class="p-2 pb-1">
+<p class="font-label-md text-label-md text-on-surface font-semibold">Bunny_Delight_V3.sticker</p>
+</div>
+<!-- Reaction Badge -->
+<div class="absolute -bottom-2 -right-1 bg-surface-container-lowest text-on-surface px-2 py-0.5 rounded-full shadow-md flex items-center gap-1 active:scale-110 transition-transform cursor-pointer">
+<span class="text-sm">❤️</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">1</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline px-1">10:45 AM</span>
+</div>
+</div>
+<!-- 5. Typing Indicator: Liam -->
+<div class="flex items-end gap-2 self-start mt-1">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary text-[12px] font-bold">LC</div>
+<div class="bg-surface-container-high px-4 py-2.5 rounded-2xl rounded-bl-sm flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 bg-secondary rounded-full animate-bounce" style="animation-delay: 0ms;"></span>
+<span class="w-2 h-2 bg-secondary rounded-full animate-bounce" style="animation-delay: 150ms;"></span>
+<span class="w-2 h-2 bg-secondary rounded-full animate-bounce" style="animation-delay: 300ms;"></span>
+</div>
+</div>
+</div>
+<!-- Attachment Tray Overlay (Collapsible) -->
+<div class="hidden grid grid-cols-4 gap-2 p-space-sm bg-surface-container-low rounded-lg mb-space-sm shadow-sm transition-all" id="attachmentMenu">
+<button class="flex flex-col items-center gap-1 p-2 rounded-xl bg-surface-container-lowest hover:bg-secondary-fixed/40 transition-colors">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">photo_library</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Photos</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 rounded-xl bg-surface-container-lowest hover:bg-primary-fixed/40 transition-colors">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Camera</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 rounded-xl bg-surface-container-lowest hover:bg-tertiary-fixed/40 transition-colors">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Audio</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-variant/40 transition-colors">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Location</span>
+</button>
+</div>
+<!-- Bottom Interactive Message Composer -->
+<footer class="sticky bottom-2 z-30 flex flex-col gap-2 bg-surface-container-lowest/90 backdrop-blur-xl p-2.5 rounded-lg shadow-xl">
+<!-- Quick Emoji Suggestions Bar -->
+<div class="flex items-center gap-2 px-1">
+<span class="font-label-sm text-label-sm text-outline">Quick reactions:</span>
+<div class="flex items-center gap-1.5">
+<button aria-label="Bunny reaction" class="px-2 py-0.5 rounded-full bg-surface-container hover:bg-primary-fixed text-sm active:scale-125 transition-transform" onclick="insertEmoji('🐰')">🐰</button>
+<button aria-label="Smile reaction" class="px-2 py-0.5 rounded-full bg-surface-container hover:bg-primary-fixed text-sm active:scale-125 transition-transform" onclick="insertEmoji('😊')">😊</button>
+<button aria-label="Heart reaction" class="px-2 py-0.5 rounded-full bg-surface-container hover:bg-primary-fixed text-sm active:scale-125 transition-transform" onclick="insertEmoji('❤️')">❤️</button>
+<button aria-label="Sparkle reaction" class="px-2 py-0.5 rounded-full bg-surface-container hover:bg-primary-fixed text-sm active:scale-125 transition-transform" onclick="insertEmoji('✨')">✨</button>
+</div>
+</div>
+<!-- Input Form controls -->
+<div class="flex items-center gap-2">
+<!-- Attachment Trigger Button -->
+<button aria-label="Open attachments" class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high active:scale-95 transition-all" id="toggleAttachBtn" onclick="toggleAttachmentMenu()">
+<span class="material-symbols-outlined text-[22px]" id="attachIcon">add</span>
+</button>
+<!-- Message Text Field -->
+<div class="flex-1 flex items-center bg-surface-container-low rounded-full px-3 py-1.5 shadow-inner focus-within:bg-surface-container-lowest transition-colors">
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="messageInput" placeholder="Message Liam..." type="text"/>
+<button aria-label="Insert mascot emoji" class="p-1 text-on-surface-variant hover:text-primary active:scale-110 transition-transform" onclick="insertEmoji('🐰')">
+<span class="material-symbols-outlined text-[20px]">sentiment_satisfied</span>
+</button>
+</div>
+<!-- Voice Record Button -->
+<button aria-label="Hold to record voice message" class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant hover:text-secondary hover:bg-secondary-fixed active:scale-95 transition-all" id="micBtn">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+<!-- Send Button -->
+<button aria-label="Send message" class="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-primary-container text-white shadow-md hover:opacity-90 active:scale-90 transition-all bg-gradient-to-tr from-primary to-primary-container" id="sendBtn" onclick="sendMessage()">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</footer>
+</div>
+<script>
+  function toggleAttachmentMenu() {
+    const menu = document.getElementById('attachmentMenu');
+    const icon = document.getElementById('attachIcon');
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+      icon.textContent = 'close';
+    } else {
+      menu.classList.add('hidden');
+      icon.textContent = 'add';
+    }
+  }
+
+  function insertEmoji(char) {
+    const input = document.getElementById('messageInput');
+    input.value += char;
+    input.focus();
+  }
+
+  let isPlaying = false;
+  function togglePlayAudio() {
+    isPlaying = !isPlaying;
+    const icon = document.getElementById('voiceIcon');
+    icon.textContent = isPlaying ? 'pause' : 'play_arrow';
+  }
+
+  function sendMessage() {
+    const input = document.getElementById('messageInput');
+    const text = input.value.trim();
+    if (!text) return;
+
+    const stream = document.getElementById('chatStream');
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'flex flex-col items-end gap-1 max-w-[85%] self-end animate-fade-in';
+    msgDiv.innerHTML = `
+      <div class="bg-primary-container text-white px-4 py-3 rounded-2xl rounded-br-sm shadow-sm bg-gradient-to-r from-primary-container to-[#ff8566]">
+        <p class="font-body-md text-body-md leading-relaxed">${escapeHtml(text)}</p>
+      </div>
+      <div class="flex items-center gap-1 px-1">
+        <span class="font-label-sm text-label-sm text-outline">Just now</span>
+        <span class="material-symbols-outlined text-[16px] text-outline">done</span>
+      </div>
+    `;
+    
+    // Insert before typing indicator
+    const typingIndicator = stream.lastElementChild;
+    stream.insertBefore(msgDiv, typingIndicator);
+    input.value = '';
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
+
+  function escapeHtml(string) {
+    const p = document.createElement('p');
+    p.textContent = string;
+    return p.innerHTML;
+  }
+
+  document.getElementById('messageInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      sendMessage();
+    }
+  });
+</script></main></body></html>

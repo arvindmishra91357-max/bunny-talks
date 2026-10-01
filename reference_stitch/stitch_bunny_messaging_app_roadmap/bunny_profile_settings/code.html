@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#a7391e", "surface-container": "#efecff", "surface-bright": "#fcf8ff", "on-error": "#ffffff", "surface-dim": "#dad8ef", "surface-container-low": "#f5f2ff", "tertiary-fixed-dim": "#4edea3", "inverse-on-surface": "#f2efff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#862208", "on-tertiary-container": "#00412b", "inverse-surface": "#2f2f41", "on-secondary": "#ffffff", "on-surface-variant": "#58423c", "primary-fixed": "#ffdad2", "on-primary-container": "#701500", "outline-variant": "#dfc0b8", "surface": "#fcf8ff", "surface-container-high": "#e8e6fe", "tertiary-container": "#0cb880", "on-secondary-container": "#fffbff", "background": "#fcf8ff", "error-container": "#ffdad6", "surface-variant": "#e3e0f8", "tertiary-fixed": "#6ffbbe", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-container": "#ff7a59", "on-tertiary-fixed": "#002113", "on-background": "#1a1a2b", "primary-fixed-dim": "#ffb4a2", "on-secondary-fixed": "#1c0062", "surface-container-highest": "#e3e0f8", "inverse-primary": "#ffb4a2", "secondary-container": "#7857f8", "secondary": "#5f3add", "primary": "#a7391e", "on-secondary-fixed-variant": "#4918c8", "on-tertiary-fixed-variant": "#005236", "secondary-fixed": "#e6deff", "on-error-container": "#93000a", "on-surface": "#1a1a2b", "tertiary": "#006c49", "outline": "#8b716b", "error": "#ba1a1a", "on-primary-fixed": "#3c0700", "secondary-fixed-dim": "#cabeff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter": "1rem", "gutter-mobile": "0.75rem", "space-md": "0.875rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-lg": "1.25rem", "margin": "1.25rem", "space-sm": "0.5rem", "margin-mobile": "1rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display": ["36px", { lineHeight: "44px", letterSpacing: "-0.03em", fontWeight: "800" }], "body-md": ["15px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Bunny App Icon" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Ull0OCgPXzrUp8FTlakK-4B7e2Ky2GB2a-J0L5_WJdjCUGWQRidQkSqX1DA88cVGXyPGOQvvboBWfVu6vi-IJ4-3jh47YowodR4iNI68P2MoCecmuQHGNdeULfl-YogXqvLpnlzAE5Hr0mEzCRs_A9AVMXu4jiYzzKoSnB9kr_9rnNdnbYly_Ya7Ou5UqPdxeTDHLAn_ySlcFxSMsI5uT-9-bkw1JcROA8esJ2HXLuNMUmHGXWAo8U0CI"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Bunny</span></div><div class="flex items-center gap-space-md"><span class="font-label-lg text-label-lg text-on-surface-variant font-semibold">Profile</span><div class="relative flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_rgba(30,30,47,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATkKgLqw87aNNkWuVkGLtBrGB_Qj-hlPmTMNHlaJVFGyUBJYJ2GjnmgYtzi7ZsD4iDdU8aCMri7QOJEcXKlab6uGBeqyX54dVpu3d3t9PRRVDlK8EI7VMLb1vjUEFdSRrT69UKKlHcL84mV9Hv1a0JjntSQ0LmWqEbClX9KmiCfCSRwn-4t5zY_LGv4RyaNvhgXj-P0hCCkWZ0lOBYFeQ0RNmGD6MSJC-RHK95-SnU2eQY4uIGyaFU"/><span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-tertiary-container rounded-full ring-2 ring-surface"></span></div></div></div></header><main class="flex-1 w-full bg-background px-gutter pt-16 pb-28"><div class="flex flex-col w-full pb-8 space-y-space-lg">
+<!-- Profile Header Card (Level 1 Elevation) -->
+<div class="relative w-full bg-surface-container-lowest rounded-lg p-margin shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)] overflow-hidden">
+<!-- Playful Ambient Mesh Gradient Background -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-44 h-44 bg-secondary-container/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative flex flex-col items-center text-center">
+<!-- Avatar Section with Edit Badge & Online Glow -->
+<div class="relative mb-space-md group cursor-pointer">
+<div class="w-24 h-24 rounded-full overflow-hidden shadow-[0_8px_24px_rgba(124,92,252,0.18)] ring-4 ring-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Warm natural portrait of Maya Lin, an energetic Asian woman in her late 20s with stylish wavy hair and glasses, smiling cheerfully in a sunny design studio with pastel ambient lighting, wearing a terracotta orange knit sweater." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdAyKoP1q_OaOMBPzdGaCny5BRu38vhKCwhhs3802WVeTVIeLUjF50-ZKtYvPnY29iExjJeBla3RprmGQHAlRDHPWBZ8YpaBd7X7GI7scZSQb0ZUjAbgiqi6bS_LPwsWdJswKolQAZW8VmwCRwKFePlGc97bcAPN7LPfdhxWWA3-h1fPfVwRYnMgcZ-CN_xuduPLVuT9PzzPqgx9UlQ0LTrACKTTjAykHZHKtWRh7O29QKW0vfiThz"/>
+</div>
+<!-- Live status ping -->
+<span class="absolute bottom-1 right-1 w-4 h-4 bg-tertiary-container rounded-full shadow-[0_0_0_3px_#FFFFFF,0_0_10px_rgba(16,185,129,0.7)]"></span>
+<!-- Edit Camera Micro-Action Button -->
+<button class="absolute -bottom-1 -left-1 w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center shadow-md active:scale-90 transition-transform" id="avatar-edit-btn">
+<span class="material-symbols-outlined text-[17px]">photo_camera</span>
+</button>
+</div>
+<!-- Identity -->
+<div class="flex items-center gap-space-xs mb-1">
+<h1 class="font-headline-md text-headline-md text-on-surface">Maya Lin</h1>
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;" title="Verified Creator">verified</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant font-normal">@mayalin</p>
+<!-- Customizable Mood Badge -->
+<div class="mt-space-sm inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-low rounded-full shadow-sm cursor-pointer hover:bg-surface-container transition-colors">
+<span class="text-sm">✨</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Designing cool things</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]">edit</span>
+</div>
+<!-- Bio block -->
+<p class="mt-space-md font-body-sm text-body-sm text-on-surface max-w-xs leading-relaxed">
+        Product Designer @ Bunny. Coffee lover, pixel perfectionist, and rabbit enthusiast 🐰✨
+      </p>
+<!-- Stats Matrix (Bunny Style) -->
+<div class="grid grid-cols-3 w-full mt-space-lg pt-space-md border-t border-transparent bg-surface-container-low/70 rounded-DEFAULT p-space-sm gap-2">
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">48</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Friends</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">12</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Groups</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-0.5">
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold">1.4k</span>
+<span class="material-symbols-outlined text-primary-container text-[16px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sparks</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Presence & Availability Switcher -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-margin shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)]">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Active Presence</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1" id="current-presence-label">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping inline-block"></span>
+        Visible to Friends
+      </span>
+</div>
+<!-- Presence Selection Chips -->
+<div class="grid grid-cols-4 gap-2 pt-1" id="presence-group">
+<button class="presence-chip flex flex-col items-center justify-center py-2.5 px-1 rounded-DEFAULT bg-secondary-container text-on-secondary-container transition-all active:scale-95 shadow-sm" data-status="online">
+<span class="w-3 h-3 rounded-full bg-tertiary-container mb-1 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
+<span class="font-label-sm text-label-sm">Online</span>
+</button>
+<button class="presence-chip flex flex-col items-center justify-center py-2.5 px-1 rounded-DEFAULT bg-surface-container-low text-on-surface transition-all active:scale-95" data-status="away">
+<span class="w-3 h-3 rounded-full bg-primary-container mb-1"></span>
+<span class="font-label-sm text-label-sm">Away</span>
+</button>
+<button class="presence-chip flex flex-col items-center justify-center py-2.5 px-1 rounded-DEFAULT bg-surface-container-low text-on-surface transition-all active:scale-95" data-status="dnd">
+<span class="w-3 h-3 rounded-full bg-error mb-1"></span>
+<span class="font-label-sm text-label-sm">DND</span>
+</button>
+<button class="presence-chip flex flex-col items-center justify-center py-2.5 px-1 rounded-DEFAULT bg-surface-container-low text-on-surface transition-all active:scale-95" data-status="invisible">
+<span class="w-3 h-3 rounded-full bg-outline mb-1"></span>
+<span class="font-label-sm text-label-sm">Ghost</span>
+</button>
+</div>
+</div>
+<!-- Menu Section: Account & Security -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-margin shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)]">
+<div class="flex items-center gap-2 mb-space-md">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">lock_person</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Account &amp; Security</h2>
+</div>
+<div class="flex flex-col space-y-1">
+<!-- Edit Profile -->
+<a class="flex items-center justify-between p-3 rounded-DEFAULT hover:bg-surface-container-low active:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-tight">Edit Profile Info</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Avatar, bio, bunny pronouns</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</a>
+<!-- Username & Phone -->
+<a class="flex items-center justify-between p-3 rounded-DEFAULT hover:bg-surface-container-low active:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-tight">Username &amp; Phone</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">+1 (555) •••-4921</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</a>
+<!-- 2FA -->
+<a class="flex items-center justify-between p-3 rounded-DEFAULT hover:bg-surface-container-low active:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-tertiary-container/15 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<p class="font-label-lg text-label-lg text-on-surface leading-tight">Two-Factor Authentication</p>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bunny Authenticator App</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</a>
+<!-- Privacy & Blocked -->
+<a class="flex items-center justify-between p-3 rounded-DEFAULT hover:bg-surface-container-low active:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-tight">Privacy &amp; Blocked List</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">0 contacts blocked</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Menu Section: Notifications & Social Presence (Toggles) -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-margin shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)]">
+<div class="flex items-center gap-2 mb-space-md">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Notifications &amp; Social Feeds</h2>
+</div>
+<div class="flex flex-col space-y-3">
+<!-- Read Receipts Toggle -->
+<div class="flex items-center justify-between p-2">
+<div class="pr-3">
+<p class="font-label-lg text-label-lg text-on-surface">Read Receipts</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Shows friends when you've viewed their direct notes</p>
+</div>
+<button aria-checked="true" class="toggle-btn relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-secondary-container transition-colors focus:outline-none" role="switch">
+<span class="translate-x-5 inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow-md transition duration-200 ease-in-out mt-0.5 ml-0.5"></span>
+</button>
+</div>
+<!-- Typing Indicators Toggle -->
+<div class="flex items-center justify-between p-2">
+<div class="pr-3">
+<p class="font-label-lg text-label-lg text-on-surface">Typing Indicators</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Displays active bouncing dots when drafting replies</p>
+</div>
+<button aria-checked="true" class="toggle-btn relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-secondary-container transition-colors focus:outline-none" role="switch">
+<span class="translate-x-5 inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow-md transition duration-200 ease-in-out mt-0.5 ml-0.5"></span>
+</button>
+</div>
+<!-- Push Notifications Level -->
+<a class="flex items-center justify-between p-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-tight">Push Notification Filters</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mentions &amp; Direct Messages only</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Menu Section: Media & Storage Usage -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-margin shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)]">
+<div class="flex items-center gap-2 mb-space-md">
+<div class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">perm_media</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Media &amp; Storage</h2>
+</div>
+<!-- Storage Progress Visual Bar -->
+<div class="bg-surface-container-low p-space-sm rounded-DEFAULT mb-space-sm">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-md text-label-md text-on-surface">Storage Footprint</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary">1.2 GB of 5 GB cached</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-secondary-container h-full w-[24%]" title="Photos &amp; Videos"></div>
+<div class="bg-primary-container h-full w-[12%]" title="Voice Memos"></div>
+<div class="bg-tertiary-container h-full w-[6%]" title="Cache &amp; Stickers"></div>
+</div>
+<div class="flex items-center justify-between mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary-container"></span> Media (780 MB)</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary-container"></span> Audio (310 MB)</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span> Cache (110 MB)</span>
+</div>
+</div>
+<!-- Auto Download Toggle -->
+<div class="flex items-center justify-between p-2">
+<div class="pr-3">
+<p class="font-label-lg text-label-lg text-on-surface">Auto-Download Media</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Save received photos automatically on Wi-Fi</p>
+</div>
+<button aria-checked="false" class="toggle-btn relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-surface-container-highest transition-colors focus:outline-none" role="switch">
+<span class="translate-x-0.5 inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow-md transition duration-200 ease-in-out mt-0.5 ml-0.5"></span>
+</button>
+</div>
+</div>
+<!-- Menu Section: Appearance & Mood Themes -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-margin shadow-[0_4px_20px_-2px_rgba(30,30,47,0.04)]">
+<div class="flex items-center gap-2 mb-space-md">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed-dim flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">palette</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Interface Theme</h2>
+</div>
+<!-- Interactive Theme Preview Palette Selector -->
+<div class="grid grid-cols-3 gap-2.5" id="theme-preview-group">
+<!-- Light Mode Selected -->
+<button class="theme-card flex flex-col items-center p-3 rounded-DEFAULT bg-surface-container-lowest ring-2 ring-secondary-container shadow-md transition-all active:scale-95 text-center" data-theme="light">
+<div class="w-full h-12 rounded-lg bg-background p-1.5 flex flex-col justify-between mb-2 border border-black/5">
+<div class="w-3/4 h-2 bg-secondary-container rounded-full"></div>
+<div class="w-1/2 h-2 bg-primary-container rounded-full self-end"></div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Light &amp; Crisp</span>
+<span class="font-label-sm text-[10px] text-secondary">Active</span>
+</button>
+<!-- Warm Pastel Mode -->
+<button class="theme-card flex flex-col items-center p-3 rounded-DEFAULT bg-surface-container-low transition-all active:scale-95 text-center hover:bg-surface-container" data-theme="warm">
+<div class="w-full h-12 rounded-lg bg-[#FAF5F0] p-1.5 flex flex-col justify-between mb-2">
+<div class="w-3/4 h-2 bg-primary-container rounded-full"></div>
+<div class="w-1/2 h-2 bg-secondary-container rounded-full self-end"></div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Warm Clay</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Soft Tones</span>
+</button>
+<!-- Dark Mode -->
+<button class="theme-card flex flex-col items-center p-3 rounded-DEFAULT bg-surface-container-low transition-all active:scale-95 text-center hover:bg-surface-container" data-theme="dark">
+<div class="w-full h-12 rounded-lg bg-[#1A1A2B] p-1.5 flex flex-col justify-between mb-2">
+<div class="w-3/4 h-2 bg-secondary-container rounded-full"></div>
+<div class="w-1/2 h-2 bg-tertiary-container rounded-full self-end"></div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Midnight</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">OLED Ready</span>
+</button>
+</div>
+</div>
+<!-- Logout, Version & Danger Zone -->
+<div class="flex flex-col items-center space-y-space-md pt-space-sm">
+<button class="w-full py-3.5 px-space-lg rounded-full bg-error-container/40 hover:bg-error-container/60 active:scale-98 transition-all flex items-center justify-center gap-2 text-error">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="font-label-lg text-label-lg font-bold">Log Out of Bunny</span>
+</button>
+<div class="flex flex-col items-center text-center space-y-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">cruelty_free</span>
+<span class="font-label-sm text-label-sm font-semibold">Bunny for Mobile • v1.0.0 (Build 412)</span>
+</div>
+<p class="font-label-sm text-[11px] text-outline">Handcrafted with care for digital wanderers</p>
+</div>
+</div>
+</div>
+<script>
+  // Presence Selector Micro-interaction
+  const presenceChips = document.querySelectorAll('.presence-chip');
+  const presenceLabel = document.getElementById('current-presence-label');
+
+  const presenceConfig = {
+    online: { text: 'Visible to Friends', dotClass: 'bg-tertiary-container' },
+    away: { text: 'Idle • Be Right Back', dotClass: 'bg-primary-container' },
+    dnd: { text: 'Do Not Disturb', dotClass: 'bg-error' },
+    invisible: { text: 'Ghost Mode (Offline to All)', dotClass: 'bg-outline' }
+  };
+
+  presenceChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      presenceChips.forEach(c => {
+        c.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'shadow-sm');
+        c.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+
+      chip.classList.remove('bg-surface-container-low', 'text-on-surface');
+      chip.classList.add('bg-secondary-container', 'text-on-secondary-container', 'shadow-sm');
+
+      const status = chip.getAttribute('data-status');
+      if (presenceConfig[status]) {
+        presenceLabel.innerHTML = `
+          <span class="w-2 h-2 rounded-full ${presenceConfig[status].dotClass} inline-block"></span>
+          ${presenceConfig[status].text}
+        `;
+      }
+    });
+  });
+
+  // Interactive Switch Toggles
+  const toggleButtons = document.querySelectorAll('.toggle-btn');
+  toggleButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isChecked = btn.getAttribute('aria-checked') === 'true';
+      const thumb = btn.querySelector('span');
+      if (isChecked) {
+        btn.setAttribute('aria-checked', 'false');
+        btn.classList.remove('bg-secondary-container');
+        btn.classList.add('bg-surface-container-highest');
+        thumb.classList.remove('translate-x-5');
+        thumb.classList.add('translate-x-0.5');
+      } else {
+        btn.setAttribute('aria-checked', 'true');
+        btn.classList.remove('bg-surface-container-highest');
+        btn.classList.add('bg-secondary-container');
+        thumb.classList.remove('translate-x-0.5');
+        thumb.classList.add('translate-x-5');
+      }
+    });
+  });
+
+  // Theme Preset Card Switcher
+  const themeCards = document.querySelectorAll('.theme-card');
+  themeCards.forEach(card => {
+    card.addEventListener('click', () => {
+      themeCards.forEach(c => {
+        c.classList.remove('ring-2', 'ring-secondary-container', 'shadow-md', 'bg-surface-container-lowest');
+        c.classList.add('bg-surface-container-low');
+        const statusSpan = c.querySelector('span:last-child');
+        if (statusSpan) statusSpan.textContent = 'Preview';
+        if (statusSpan) statusSpan.classList.remove('text-secondary');
+        if (statusSpan) statusSpan.classList.add('text-on-surface-variant');
+      });
+
+      card.classList.remove('bg-surface-container-low');
+      card.classList.add('ring-2', 'ring-secondary-container', 'shadow-md', 'bg-surface-container-lowest');
+      const activeStatus = card.querySelector('span:last-child');
+      if (activeStatus) {
+        activeStatus.textContent = 'Active';
+        activeStatus.classList.remove('text-on-surface-variant');
+        activeStatus.classList.add('text-secondary');
+      }
+    });
+  });
+</script></main><div class="fixed bottom-0 w-full z-50 pointer-events-none pb-safe"><div class="px-gutter pb-space-sm pt-space-xs"><nav class="pointer-events-auto mx-auto max-w-md bg-surface-container-lowest/85 backdrop-blur-2xl rounded-full p-space-xs shadow-[0_12px_36px_-4px_rgba(120,87,248,0.16)] flex items-center justify-between" data-active-classes="bg-primary-container text-on-primary shadow-[0_4px_14px_rgba(255,122,89,0.35)]"><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="chats" href="#"><span class="material-symbols-outlined text-[22px]">chat_bubble</span><span class="font-label-sm text-label-sm mt-0.5">Chats</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="friends" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm mt-0.5">Friends</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all text-on-surface-variant hover:text-on-surface active:scale-95" data-path="discover" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-sm text-label-sm mt-0.5">Discover</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-space-xs rounded-full transition-all active:scale-95 bg-primary-container text-on-primary shadow-[0_4px_14px_rgba(255,122,89,0.35)]" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></nav></div></div></body></html>

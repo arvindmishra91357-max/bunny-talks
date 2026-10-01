@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="2340" viewBox="0 0 1080 2340">
+<defs>
+  <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF6FAE"/><stop offset="1" stop-color="#9B7BFF"/></linearGradient>
+  <linearGradient id="soft" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF0F7"/><stop offset="1" stop-color="#F0EDFF"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-opacity=".10"/></filter>
+</defs>
+<rect width="1080" height="2340" rx="48" fill="#F8F7FC"/>
+<rect x="0" y="0" width="1080" height="150" fill="white" opacity=".9"/>
+<text x="70" y="92" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#25233A">My profile</text>
+
+<circle cx="540" cy="470" r="145" fill="url(#soft)" filter="url(#shadow)"/><text x="540" y="525" font-family="Arial, sans-serif" font-size="95" font-weight="400" fill="#77748A" text-anchor="middle">🐰</text>
+<text x="540" y="700" font-family="Arial, sans-serif" font-size="46" font-weight="800" fill=" #25233A" text-anchor="middle">Arvind</text>
+<text x="540" y="750" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#888496" text-anchor="middle">@arvind</text>
+<rect x="160" y="830" width="760" height="105" rx="52" fill="white" stroke="#E5E2EC" stroke-width="3"/><text x="540" y="897" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#5B566D" text-anchor="middle">Edit profile</text>
+<rect x="80" y="1030" width="920" height="110" rx="28" fill="white"/><text x="125" y="1100" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#25233A" text-anchor="start">⚙   Settings</text>
+<rect x="80" y="1165" width="920" height="110" rx="28" fill="white"/><text x="125" y="1235" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#25233A" text-anchor="start">🔒   Privacy</text>
+<rect x="80" y="1300" width="920" height="110" rx="28" fill="white"/><text x="125" y="1370" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#25233A" text-anchor="start">🔔   Notifications</text>
+<rect x="80" y="1435" width="920" height="110" rx="28" fill="white"/><text x="125" y="1505" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#E85C78" text-anchor="start">🚪   Log out</text>
+
+<rect x="0" y="2250" width="1080" height="90" fill="white"/>
+<text x="70" y="2305" font-family="Arial" font-size="28" fill="#A4A1B4">Bunny</text>
+<circle cx="1010" cy="2290" r="14" fill="#FF6FAE"/>
+</svg>

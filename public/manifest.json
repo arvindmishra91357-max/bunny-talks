@@ -1,0 +1,23 @@
+{
+  "name": "Bunny Talks",
+  "short_name": "BunnyTalks",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9ff",
+  "theme_color": "#ff607d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/bunny-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/bunny-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

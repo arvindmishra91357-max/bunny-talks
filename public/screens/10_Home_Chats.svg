@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="2340" viewBox="0 0 1080 2340">
+<defs>
+  <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF6FAE"/><stop offset="1" stop-color="#9B7BFF"/></linearGradient>
+  <linearGradient id="soft" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF0F7"/><stop offset="1" stop-color="#F0EDFF"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-opacity=".10"/></filter>
+</defs>
+<rect width="1080" height="2340" rx="48" fill="#F8F7FC"/>
+<rect x="0" y="0" width="1080" height="150" fill="white" opacity=".9"/>
+<text x="70" y="92" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#25233A">Chats</text>
+
+<circle cx="925" cy="75" r="43" fill="#FFF0F7"/><text x="925" y="90" font-family="Arial, sans-serif" font-size="45" font-weight="400" fill="#FF6FAE" text-anchor="middle">+</text>
+<rect x="70" y="180" width="940" height="100" rx="50" fill="white"/>
+<text x="125" y="245" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#A09CAC" text-anchor="start">⌕  Search chats</text>
+<circle cx="135" cy="390" r="62" fill="url(#soft)"/><text x="135" y="410" font-family="Arial, sans-serif" font-size="45" font-weight="400" fill="#77748A" text-anchor="middle">🐰</text><text x="235" y="380" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#25233A" text-anchor="start">Aarav</text><text x="235" y="425" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#858193" text-anchor="start">Hey! How are you?</text><text x="930" y="380" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#A09CAC" text-anchor="end">10:42</text><circle cx="135" cy="565" r="62" fill="url(#soft)"/><text x="135" y="585" font-family="Arial, sans-serif" font-size="45" font-weight="400" fill="#77748A" text-anchor="middle">🐰</text><text x="235" y="555" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#25233A" text-anchor="start">Priya</text><text x="235" y="600" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#858193" text-anchor="start">Sent a photo 📷</text><text x="930" y="555" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#A09CAC" text-anchor="end">09:18</text><circle cx="135" cy="740" r="62" fill="url(#soft)"/><text x="135" y="760" font-family="Arial, sans-serif" font-size="45" font-weight="400" fill="#77748A" text-anchor="middle">🐰</text><text x="235" y="730" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#25233A" text-anchor="start">Rahul</text><text x="235" y="775" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#858193" text-anchor="start">Let's meet tomorrow</text><text x="930" y="730" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#A09CAC" text-anchor="end">Yesterday</text><circle cx="135" cy="915" r="62" fill="url(#soft)"/><text x="135" y="935" font-family="Arial, sans-serif" font-size="45" font-weight="400" fill="#77748A" text-anchor="middle">🐰</text><text x="235" y="905" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#25233A" text-anchor="start">Maya</text><text x="235" y="950" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#858193" text-anchor="start">Voice message</text><text x="930" y="905" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#A09CAC" text-anchor="end">Mon</text>
+<rect x="0" y="2050" width="1080" height="200" fill="white"/>
+<text x="135" y="2160" font-family="Arial, sans-serif" font-size="48" font-weight="400" fill="#FF6FAE" text-anchor="middle">💬</text><text x="135" y="2210" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#FF6FAE" text-anchor="middle">Chats</text>
+<text x="360" y="2160" font-family="Arial, sans-serif" font-size="48" font-weight="400" fill="#A09CAC" text-anchor="middle">👥</text><text x="360" y="2210" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#A09CAC" text-anchor="middle">People</text>
+<text x="625" y="2160" font-family="Arial, sans-serif" font-size="54" font-weight="400" fill="#A09CAC" text-anchor="middle">⌕</text><text x="625" y="2210" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#A09CAC" text-anchor="middle">Search</text>
+<text x="900" y="2160" font-family="Arial, sans-serif" font-size="48" font-weight="400" fill="#A09CAC" text-anchor="middle">◯</text><text x="900" y="2210" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#A09CAC" text-anchor="middle">Profile</text>
+
+<rect x="0" y="2250" width="1080" height="90" fill="white"/>
+<text x="70" y="2305" font-family="Arial" font-size="28" fill="#A4A1B4">Bunny</text>
+<circle cx="1010" cy="2290" r="14" fill="#FF6FAE"/>
+</svg>
