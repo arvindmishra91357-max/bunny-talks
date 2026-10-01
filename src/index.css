@@ -314,32 +314,74 @@ body {
 
 .pills {
   display: flex;
-  gap: 7px;
+  gap: 8px;
   overflow-x: auto;
-  padding-bottom: 3px;
+  padding: 2px 2px 8px;
   scrollbar-width: none;
+  align-items: center;
 }
 .pills::-webkit-scrollbar {
   display: none;
 }
 
 .pill {
-  border: 0;
-  padding: 9px 14px;
-  border-radius: 99px;
-  background: #eeeafa;
-  color: #777287;
-  font-weight: 700;
-  font-size: 12px;
+  border: 1px solid rgba(123, 92, 245, 0.12);
+  height: 36px;
+  min-width: 62px;
+  padding: 0 16px;
+  border-radius: 9999px;
+  background: rgba(123, 92, 245, 0.06);
+  color: #6c6682;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: -0.01em;
   white-space: nowrap;
   cursor: pointer;
-  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.pill:hover {
+  background: rgba(123, 92, 245, 0.12);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.pill:active {
+  transform: translateY(0);
 }
 
 .pill.active {
-  background: linear-gradient(90deg, var(--coral), #ff7b68);
-  color: #fff;
-  box-shadow: 0 3px 10px rgba(255, 96, 125, 0.28);
+  background: linear-gradient(135deg, var(--coral), var(--coral2)) !important;
+  color: #fff !important;
+  font-weight: 700;
+  border-color: transparent !important;
+  box-shadow: 0 4px 14px var(--primary-glow, rgba(255, 96, 125, 0.35)) !important;
+  transform: translateY(-0.5px);
+}
+
+.pill b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  margin-left: 6px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+  background: rgba(123, 92, 245, 0.18);
+  color: var(--purple);
+}
+
+.pill.active b {
+  background: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
 }
 
 .section {
@@ -1599,30 +1641,49 @@ body {
 
 .tabs {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   overflow-x: auto;
-  margin: 8px 0 12px;
+  margin: 6px 0 14px;
   scrollbar-width: none;
+  align-items: center;
 }
 .tabs::-webkit-scrollbar {
   display: none;
 }
 
 .tabs button {
-  border: 0;
-  background: #f0edf7;
-  padding: 8px 12px;
-  border-radius: 99px;
-  font: 700 11px inherit;
-  color: #777287;
+  border: 1px solid rgba(123, 92, 245, 0.12);
+  height: 36px;
+  min-width: 62px;
+  padding: 0 16px;
+  border-radius: 9999px;
+  font: 600 13px inherit;
+  letter-spacing: -0.01em;
+  color: #6c6682;
+  background: rgba(123, 92, 245, 0.06);
   white-space: nowrap;
   cursor: pointer;
-  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.tabs button:hover {
+  background: rgba(123, 92, 245, 0.12);
+  color: var(--ink);
+  transform: translateY(-1px);
 }
 
 .tabs button.on {
-  background: #e5dcff;
-  color: #6945d8;
+  background: linear-gradient(135deg, var(--coral), var(--coral2)) !important;
+  color: #fff !important;
+  font-weight: 700;
+  border-color: transparent !important;
+  box-shadow: 0 4px 14px var(--primary-glow, rgba(255, 96, 125, 0.35)) !important;
+  transform: translateY(-0.5px);
 }
 
 .discover-banner {
@@ -2359,24 +2420,49 @@ html.dark .btn.light:hover {
 }
 
 html.dark .pill {
-  background: #221d38;
-  color: #a8a4bf;
+  background: rgba(255, 255, 255, 0.06);
+  color: #b0a8c9;
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+html.dark .pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 html.dark .pill.active {
-  background: linear-gradient(90deg, var(--coral), var(--coral2));
-  color: #fff;
+  background: linear-gradient(135deg, var(--coral), var(--coral2)) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 14px var(--primary-glow, rgba(255, 96, 125, 0.35)) !important;
+}
+
+html.dark .pill b {
+  background: rgba(255, 255, 255, 0.15);
+  color: #c4b5fd;
+}
+
+html.dark .pill.active b {
+  background: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
 }
 
 html.dark .tabs button {
-  background: #221d38;
-  color: var(--muted);
-  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.06);
+  color: #b0a8c9;
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+html.dark .tabs button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 html.dark .tabs button.on {
-  background: var(--purple);
-  color: #fff;
+  background: linear-gradient(135deg, var(--coral), var(--coral2)) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 14px var(--primary-glow, rgba(255, 96, 125, 0.35)) !important;
 }
 
 html.dark .channel-icon {

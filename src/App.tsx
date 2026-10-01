@@ -1806,6 +1806,29 @@ export const App: React.FC = () => {
     });
   }, [allFriends, newChatSearch]);
 
+  // Discover Screen Filtered Items
+  const discoverFilteredChannels = useMemo(() => {
+    if (!discoverSearch.trim()) return channelsList;
+    const q = discoverSearch.toLowerCase();
+    return channelsList.filter((ch) => ch.name.toLowerCase().includes(q) || ch.desc.toLowerCase().includes(q));
+  }, [channelsList, discoverSearch]);
+
+  const discoverFilteredGroups = useMemo(() => {
+    if (!discoverSearch.trim()) return groupsList;
+    const q = discoverSearch.toLowerCase();
+    return groupsList.filter(
+      (g) => g.name.toLowerCase().includes(q) || (g.tag && g.tag.toLowerCase().includes(q)) || (g.desc && g.desc.toLowerCase().includes(q))
+    );
+  }, [groupsList, discoverSearch]);
+
+  const discoverFilteredPeople = useMemo(() => {
+    if (!discoverSearch.trim()) return allFriends;
+    const q = discoverSearch.toLowerCase();
+    return allFriends.filter(
+      (f) => f.name.toLowerCase().includes(q) || (f.username && f.username.toLowerCase().includes(q)) || f.subtitle.toLowerCase().includes(q)
+    );
+  }, [allFriends, discoverSearch]);
+
   const unreadNotifsCount = notifications.filter((n) => n.unread).length;
   const currentMessages = roomMessages[activeChat.name] || [];
   const displayedMessages = inChatSearchQuery.trim()
@@ -1920,16 +1943,6 @@ export const App: React.FC = () => {
               </h2>
             </div>
             <div>
-              {activeScreen === 'calls' && (
-                <button 
-                  className="btn light" 
-                  style={{ padding: '6px 10px', fontSize: 11, color: '#ef4444' }}
-                  onClick={handleClearCallLogs}
-                  title="Clear call history"
-                >
-                  <Trash2 className="w-3.5 h-3.5 inline mr-1" /> Clear
-                </button>
-              )}
               {activeScreen === 'friends' && (
                 <button 
                   className="btn primary" 
@@ -2225,9 +2238,6 @@ export const App: React.FC = () => {
 
               <div className="section">
                 <h2>Recent Calls</h2>
-                {callLogs.length > 0 && (
-                  <a onClick={handleClearCallLogs} style={{ color: '#ef4444' }}>Clear history</a>
-                )}
               </div>
 
               <div className="call-log-list">
@@ -2482,145 +2492,354 @@ export const App: React.FC = () => {
               </button>
               <button 
                 className={discoverTab === 'people' ? 'on' : ''} 
-                onClick={() => navigateTo('friends')}
+                onClick={() => setDiscoverTab('people')}
               >
                 People
               </button>
               <button 
                 className={discoverTab === 'groups' ? 'on' : ''} 
-                onClick={() => navigateTo('groups')}
+                onClick={() => setDiscoverTab('groups')}
               >
                 Groups
               </button>
               <button 
                 className={discoverTab === 'channels' ? 'on' : ''} 
-                onClick={() => navigateTo('channels')}
+                onClick={() => setDiscoverTab('channels')}
               >
                 Channels
               </button>
             </div>
 
-            {/* COMPACT ACTIVE SPARKS IN DISCOVER */}
-            <div className="compact-sparks-section" style={{ margin: '8px 0 16px' }}>
-              <div className="compact-sparks-header">
-                <div className="flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-bunny-coral" />
-                  <h2 className="compact-sparks-title">Active Sparks</h2>
-                </div>
-                <button 
-                  className="section-action-btn" 
-                  onClick={() => navigateTo('sparks')}
-                >
-                  <span>View All ({sparksList.length})</span>
-                </button>
-              </div>
-
-              <div className="stories-compact">
-                <div className="story-compact plus" onClick={() => openModal('spark')} title="Post a Spark">
-                  <div className="story-compact-ring">
-                    <Plus className="w-4 h-4 text-white stroke-[3]" />
-                  </div>
-                  <span>New</span>
-                </div>
-                {sparksList.map((spark, idx) => (
-                  <div 
-                    key={spark.id} 
-                    className="story-compact" 
-                    onClick={() => openStoryViewer(idx)}
-                    title={`View ${spark.user}'s Spark`}
-                  >
-                    <div className="story-compact-ring">
-                      <img src={spark.avatar} alt={spark.user} />
+            {/* TAB 1: ALL DISCOVER OVERVIEW */}
+            {discoverTab === 'all' && (
+              <>
+                {/* COMPACT ACTIVE SPARKS IN DISCOVER */}
+                <div className="compact-sparks-section" style={{ margin: '8px 0 16px' }}>
+                  <div className="compact-sparks-header">
+                    <div className="flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-bunny-coral" />
+                      <h2 className="compact-sparks-title">Active Sparks</h2>
                     </div>
-                    <span>{spark.user}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Live Hangouts Banner */}
-            <div className="discover-banner">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#ff607d]/20 text-[#ff607d] text-[10px] font-extrabold mb-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#ff607d] animate-ping" />
-                <span>LIVE NOW</span>
-              </div>
-              <b>Live hangouts are happening now 🎧</b>
-              <p>Join an active audio room, discuss prototypes, and meet creative people.</p>
-              <button className="btn primary" onClick={() => openModal('liveRoom')}>
-                <Headphones className="w-3.5 h-3.5 inline mr-1.5" /> Join Live Stage
-              </button>
-            </div>
-
-            {/* Trending Channels */}
-            <div className="section">
-              <h2>Trending Channels</h2>
-              <button 
-                className="section-action-btn" 
-                onClick={() => navigateTo('channels')}
-              >
-                <span>See All</span>
-              </button>
-            </div>
-
-            <div className="card">
-              {channelsList.map((ch) => (
-                <div 
-                  key={ch.id} 
-                  className="listrow"
-                  onClick={() => openChatRoom(ch.name, '/assets/alex.png', true, true)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  <div className="channel-icon">{ch.icon}</div>
-                  <div className="grow">
-                    <b>{ch.name}</b>
-                    <small>{ch.desc}</small>
-                  </div>
-                  {ch.isJoined ? (
-                    <span className="tag" style={{ background: '#eafbf4', color: '#16a34a' }}>JOINED</span>
-                  ) : (
                     <button 
-                      className="btn light" 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleToggleChannelJoin(ch.id);
-                      }}
+                      className="section-action-btn" 
+                      onClick={() => navigateTo('sparks')}
                     >
-                      Join
+                      <span>View All ({sparksList.length})</span>
                     </button>
+                  </div>
+
+                  <div className="stories-compact">
+                    <div className="story-compact plus" onClick={() => openModal('spark')} title="Post a Spark">
+                      <div className="story-compact-ring">
+                        <Plus className="w-4 h-4 text-white stroke-[3]" />
+                      </div>
+                      <span>New</span>
+                    </div>
+                    {sparksList.map((spark, idx) => (
+                      <div 
+                        key={spark.id} 
+                        className="story-compact" 
+                        onClick={() => openStoryViewer(idx)}
+                        title={`View ${spark.user}'s Spark`}
+                      >
+                        <div className="story-compact-ring">
+                          <img src={spark.avatar} alt={spark.user} />
+                        </div>
+                        <span>{spark.user}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Live Hangouts Banner */}
+                <div className="discover-banner">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#ff607d]/20 text-[#ff607d] text-[10px] font-extrabold mb-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff607d] animate-ping" />
+                    <span>LIVE NOW</span>
+                  </div>
+                  <b>Live hangouts are happening now 🎧</b>
+                  <p>Join an active audio room, discuss prototypes, and meet creative people.</p>
+                  <button className="btn primary" onClick={() => openModal('liveRoom')}>
+                    <Headphones className="w-3.5 h-3.5 inline mr-1.5" /> Join Live Stage
+                  </button>
+                </div>
+
+                {/* Discover People Section */}
+                <div className="section">
+                  <h2>People to Connect</h2>
+                  <button 
+                    className="section-action-btn" 
+                    onClick={() => setDiscoverTab('people')}
+                  >
+                    <span>See All</span>
+                  </button>
+                </div>
+
+                <div className="card">
+                  {discoverFilteredPeople.slice(0, 3).map((f) => (
+                    <div 
+                      key={f.id} 
+                      className="listrow" 
+                      onClick={() => openChatRoom(f.name, f.avatar, f.isOnline)}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      <div className={f.isOnline ? 'online' : ''}>
+                        <img className="avatar" src={f.avatar} alt={f.name} />
+                      </div>
+                      <div className="grow">
+                        <b>{f.name}</b>
+                        <small>{f.subtitle}</small>
+                      </div>
+                      <button 
+                        className="btn light"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openChatRoom(f.name, f.avatar, f.isOnline);
+                        }}
+                      >
+                        Chat
+                      </button>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Trending Channels */}
+                <div className="section">
+                  <h2>Trending Channels</h2>
+                  <button 
+                    className="section-action-btn" 
+                    onClick={() => setDiscoverTab('channels')}
+                  >
+                    <span>See All</span>
+                  </button>
+                </div>
+
+                <div className="card">
+                  {discoverFilteredChannels.slice(0, 3).map((ch) => (
+                    <div 
+                      key={ch.id} 
+                      className="listrow"
+                      onClick={() => openChatRoom(ch.name, '/assets/alex.png', true, true)}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      <div className="channel-icon">{ch.icon}</div>
+                      <div className="grow">
+                        <b>{ch.name}</b>
+                        <small>{ch.desc}</small>
+                      </div>
+                      {ch.isJoined ? (
+                        <span className="tag" style={{ background: '#eafbf4', color: '#16a34a' }}>JOINED</span>
+                      ) : (
+                        <button 
+                          className="btn light" 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleToggleChannelJoin(ch.id);
+                          }}
+                        >
+                          Join
+                        </button>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Popular Communities */}
+                <div className="section">
+                  <h2>Popular Communities</h2>
+                  <button 
+                    className="section-action-btn" 
+                    onClick={() => setDiscoverTab('groups')}
+                  >
+                    <span>See All</span>
+                  </button>
+                </div>
+
+                <div className="card">
+                  {discoverFilteredGroups.slice(0, 3).map((g) => (
+                    <div 
+                      key={g.id} 
+                      className="listrow" 
+                      onClick={() => openChatRoom(g.name, '/assets/maya.png', true, true)}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      <div className="channel-icon">{g.icon}</div>
+                      <div className="grow">
+                        <b>{g.name}</b>
+                        <small>{g.members}</small>
+                      </div>
+                      <span className="tag">{g.tag}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Featured Sparks */}
+                <div className="section">
+                  <h2>Featured Sparks</h2>
+                  <button 
+                    className="section-action-btn" 
+                    onClick={() => navigateTo('sparks')}
+                  >
+                    <span>See All</span>
+                  </button>
+                </div>
+
+                <div className="spark-grid">
+                  {sparksList.slice(0, 2).map((spark, idx) => (
+                    <div 
+                      key={spark.id} 
+                      className="spark" 
+                      onClick={() => openStoryViewer(idx)}
+                    >
+                      <button 
+                        className={`spark-heart-btn ${likedSparks[spark.id] ? 'liked' : ''}`}
+                        onClick={(e) => handleToggleLikeSpark(spark.id, e)}
+                      >
+                        ❤️ {spark.likes}
+                      </button>
+                      <img src={spark.image} alt={spark.caption} />
+                      <div className="cap">{spark.caption}</div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {/* TAB 2: PEOPLE DISCOVERY */}
+            {discoverTab === 'people' && (
+              <div style={{ marginTop: 8 }}>
+                <div className="section">
+                  <h2>People &amp; Creators ({discoverFilteredPeople.length})</h2>
+                  <button 
+                    className="section-action-btn" 
+                    onClick={() => openModal('add_friend')}
+                  >
+                    <Plus className="w-3.5 h-3.5" />
+                    <span>Add Friend</span>
+                  </button>
+                </div>
+
+                <div className="card">
+                  {discoverFilteredPeople.length > 0 ? (
+                    discoverFilteredPeople.map((f) => (
+                      <div 
+                        key={f.id} 
+                        className="listrow" 
+                        onClick={() => openChatRoom(f.name, f.avatar, f.isOnline)}
+                        style={{ cursor: 'pointer' }}
+                      >
+                        <div className={f.isOnline ? 'online' : ''}>
+                          <img className="avatar" src={f.avatar} alt={f.name} />
+                        </div>
+                        <div className="grow">
+                          <b>{f.name}</b>
+                          <small>{f.subtitle}</small>
+                        </div>
+                        <button 
+                          className="btn light"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openChatRoom(f.name, f.avatar, f.isOnline);
+                          }}
+                        >
+                          Chat
+                        </button>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="empty">No people found matching "{discoverSearch}"</div>
                   )}
                 </div>
-              ))}
-            </div>
+              </div>
+            )}
 
-            {/* Featured Sparks */}
-            <div className="section">
-              <h2>Featured Sparks</h2>
-              <button 
-                className="section-action-btn" 
-                onClick={() => navigateTo('sparks')}
-              >
-                <span>See All</span>
-              </button>
-            </div>
-
-            <div className="spark-grid">
-              {sparksList.slice(0, 2).map((spark, idx) => (
-                <div 
-                  key={spark.id} 
-                  className="spark" 
-                  onClick={() => openStoryViewer(idx)}
-                >
+            {/* TAB 3: GROUPS DISCOVERY */}
+            {discoverTab === 'groups' && (
+              <div style={{ marginTop: 8 }}>
+                <div className="section">
+                  <h2>Public Communities ({discoverFilteredGroups.length})</h2>
                   <button 
-                    className={`spark-heart-btn ${likedSparks[spark.id] ? 'liked' : ''}`}
-                    onClick={(e) => handleToggleLikeSpark(spark.id, e)}
+                    className="section-action-btn" 
+                    onClick={() => openModal('group')}
                   >
-                    ❤️ {spark.likes}
+                    <Plus className="w-3.5 h-3.5" />
+                    <span>Create Group</span>
                   </button>
-                  <img src={spark.image} alt={spark.caption} />
-                  <div className="cap">{spark.caption}</div>
                 </div>
-              ))}
-            </div>
+
+                <div className="card">
+                  {discoverFilteredGroups.length > 0 ? (
+                    discoverFilteredGroups.map((g) => (
+                      <div 
+                        key={g.id} 
+                        className="listrow" 
+                        onClick={() => openChatRoom(g.name, '/assets/maya.png', true, true)}
+                        style={{ cursor: 'pointer' }}
+                      >
+                        <div className="channel-icon">{g.icon}</div>
+                        <div className="grow">
+                          <b>{g.name}</b>
+                          <small>{g.members}</small>
+                        </div>
+                        <span className="tag">{g.tag}</span>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="empty">No communities found matching "{discoverSearch}"</div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* TAB 4: CHANNELS DISCOVERY */}
+            {discoverTab === 'channels' && (
+              <div style={{ marginTop: 8 }}>
+                <div className="section">
+                  <h2>Channels &amp; Broadcasts ({discoverFilteredChannels.length})</h2>
+                  <button 
+                    className="section-action-btn" 
+                    onClick={() => openModal('channel')}
+                  >
+                    <Plus className="w-3.5 h-3.5" />
+                    <span>Create Channel</span>
+                  </button>
+                </div>
+
+                <div className="card">
+                  {discoverFilteredChannels.length > 0 ? (
+                    discoverFilteredChannels.map((ch) => (
+                      <div 
+                        key={ch.id} 
+                        className="listrow"
+                        onClick={() => openChatRoom(ch.name, '/assets/alex.png', true, true)}
+                        style={{ cursor: 'pointer' }}
+                      >
+                        <div className="channel-icon">{ch.icon}</div>
+                        <div className="grow">
+                          <b>{ch.name}</b>
+                          <small>{ch.desc}</small>
+                        </div>
+                        {ch.isJoined ? (
+                          <span className="tag" style={{ background: '#eafbf4', color: '#16a34a' }}>JOINED</span>
+                        ) : (
+                          <button 
+                            className="btn light" 
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleToggleChannelJoin(ch.id);
+                            }}
+                          >
+                            Join
+                          </button>
+                        )}
+                      </div>
+                    ))
+                  ) : (
+                    <div className="empty">No channels found matching "{discoverSearch}"</div>
+                  )}
+                </div>
+              </div>
+            )}
           </main>
         )}
 
