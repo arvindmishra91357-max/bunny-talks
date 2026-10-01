@@ -587,6 +587,17 @@ export const App: React.FC = () => {
   });
   const [callsFilter, setCallsFilter] = useState<'all' | 'missed'>('all');
 
+  // Main 5 Navigation Tabs for sequential swipe navigation
+  const MAIN_NAV_TABS: ScreenId[] = useMemo(() => ['home', 'calls', 'friends', 'discover', 'profile'], []);
+  const [navTransitionDir, setNavTransitionDir] = useState<'forward' | 'backward'>('forward');
+
+  // Global Navigation Swipe Gesture Tracking (Right swipe -> Next tab, Left swipe -> Previous tab / Back)
+  const navSwipeStartXRef = useRef<number>(0);
+  const navSwipeStartYRef = useRef<number>(0);
+  const navSwipeStartTimeRef = useRef<number>(0);
+  const isNavSwipingRef = useRef<boolean>(false);
+  const navSwipeTargetRef = useRef<HTMLElement | null>(null);
+
   // Swipe Right / Left to Reply gesture tracking
   const [swipingMsgId, setSwipingMsgId] = useState<string | null>(null);
   const [swipeOffset, setSwipeOffset] = useState<number>(0);
@@ -970,10 +981,21 @@ export const App: React.FC = () => {
     }, 2400);
   };
 
-  // Screen Navigation with History tracking & Browser History Push
-  const navigateTo = (screen: ScreenId) => {
+  // Screen Navigation with History tracking, Directional Animation & Browser History Push
+  const navigateTo = (screen: ScreenId, explicitDir?: 'forward' | 'backward') => {
     if (screen !== activeScreen) {
       playTapSound();
+      if (explicitDir) {
+        setNavTransitionDir(explicitDir);
+      } else {
+        const fromIdx = MAIN_NAV_TABS.indexOf(activeScreen);
+        const toIdx = MAIN_NAV_TABS.indexOf(screen);
+        if (fromIdx !== -1 && toIdx !== -1) {
+          setNavTransitionDir(toIdx >= fromIdx ? 'forward' : 'backward');
+        } else {
+          setNavTransitionDir('forward');
+        }
+      }
       const updatedHistory = [...history, activeScreen];
       setHistory(updatedHistory);
       setActiveScreen(screen);
@@ -1002,6 +1024,7 @@ export const App: React.FC = () => {
   // Universal Back Button Action (Fixed: Never randomly jumps to wrong screens)
   const goBack = () => {
     playTapSound();
+    setNavTransitionDir('backward');
     if (modalType !== 'none') {
       closeModal();
       return;
@@ -1396,6 +1419,104 @@ export const App: React.FC = () => {
     setTimeout(() => {
       setSwipingMsgId(null);
     }, 280);
+  };
+
+  // ============================================================
+  // GLOBAL NAVIGATION SWIPE HANDLERS (TOUCH & MOUSE DRAG)
+  // Right swipe (deltaX > 42): Forward (Chats -> Calls -> Friends -> Discover -> Profile)
+  // Left swipe (deltaX < -42): Backward (Profile -> Discover -> Friends -> Calls -> Chats, or Back on sub-screens)
+  // ============================================================
+  const handleGlobalNavSwipeStart = (clientX: number, clientY: number, target: HTMLElement | null) => {
+    // 1. Don't swipe if modal, lightbox, call, or logout confirmation is active
+    if (modalType !== 'none' || lightboxMedia !== null || activeCallData !== null || isLogoutConfirm) {
+      isNavSwipingRef.current = false;
+      return;
+    }
+
+    if (!target) {
+      isNavSwipingRef.current = false;
+      return;
+    }
+
+    // 2. Ignore elements that have their own horizontal gestures or inputs
+    if (
+      target.closest(
+        'input, textarea, select, button, .msg-swipe-container, .stories, .stories-compact, .filter-pills, .pills, .feed-tabs, .category-chips, .audio-player-card, .sheet, .lightbox'
+      )
+    ) {
+      isNavSwipingRef.current = false;
+      return;
+    }
+
+    navSwipeStartXRef.current = clientX;
+    navSwipeStartYRef.current = clientY;
+    navSwipeStartTimeRef.current = Date.now();
+    navSwipeTargetRef.current = target;
+    isNavSwipingRef.current = true;
+  };
+
+  const handleGlobalNavSwipeEnd = (clientX: number, clientY: number) => {
+    if (!isNavSwipingRef.current) return;
+    isNavSwipingRef.current = false;
+
+    // If user was highlighting or selecting text, do not navigate
+    if (window.getSelection && window.getSelection()?.toString().length) {
+      return;
+    }
+
+    const deltaX = clientX - navSwipeStartXRef.current;
+    const deltaY = clientY - navSwipeStartYRef.current;
+    const elapsed = Date.now() - navSwipeStartTimeRef.current;
+
+    // Must be within 800ms gesture window
+    if (elapsed > 800) return;
+
+    const absX = Math.abs(deltaX);
+    const absY = Math.abs(deltaY);
+
+    // Dominantly horizontal: at least 42px movement and 1.3x more horizontal than vertical
+    if (absX < 42 || absX < absY * 1.3) return;
+
+    // Inside chat room
+    if (activeScreen === 'room') {
+      // If user swiped on a message container or composer, message swipe handles it
+      if (navSwipeTargetRef.current?.closest('.msg-swipe-container, .messages, .composer')) {
+        return;
+      }
+      // Left swipe anywhere on room header or background returns to previous screen
+      if (deltaX < -42) {
+        goBack();
+      }
+      return;
+    }
+
+    // Sub-screens: groups, channels, sparks, filters -> Left swipe goes back
+    const isSubScreen = ['groups', 'channels', 'sparks', 'filters'].includes(activeScreen);
+    if (isSubScreen) {
+      if (deltaX < -42) {
+        goBack();
+      }
+      return;
+    }
+
+    // Main 5 navigation tabs: 'home' -> 'calls' -> 'friends' -> 'discover' -> 'profile'
+    const currentIndex = MAIN_NAV_TABS.indexOf(activeScreen);
+    if (currentIndex === -1) return;
+
+    // User requirement:
+    // Right swipe: chats -> call -> friends -> discover -> profile
+    // Left swipe: back through tabs (profile -> discover -> friends -> calls -> chats)
+    if (deltaX > 42) {
+      if (currentIndex < MAIN_NAV_TABS.length - 1) {
+        const nextScreen = MAIN_NAV_TABS[currentIndex + 1];
+        navigateTo(nextScreen, 'forward');
+      }
+    } else if (deltaX < -42) {
+      if (currentIndex > 0) {
+        const prevScreen = MAIN_NAV_TABS[currentIndex - 1];
+        navigateTo(prevScreen, 'backward');
+      }
+    }
   };
 
   // Synthesized Voice Note Audio Playback Simulation
@@ -1866,7 +1987,29 @@ export const App: React.FC = () => {
       onToggleTheme={() => setIsDark((prev) => !prev)}
       onSimulateIncomingCall={() => handleSimulateIncomingCall('video')}
     >
-      <div className={`app ${activeTheme}`}>
+      <div 
+        className={`app ${activeTheme}`}
+        onTouchStart={(e) => {
+          if (e.touches && e.touches.length > 0) {
+            handleGlobalNavSwipeStart(e.touches[0].clientX, e.touches[0].clientY, e.target as HTMLElement);
+          }
+        }}
+        onTouchEnd={(e) => {
+          if (e.changedTouches && e.changedTouches.length > 0) {
+            handleGlobalNavSwipeEnd(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+          }
+        }}
+        onMouseDown={(e) => {
+          if (e.button === 0) {
+            handleGlobalNavSwipeStart(e.clientX, e.clientY, e.target as HTMLElement);
+          }
+        }}
+        onMouseUp={(e) => {
+          if (e.button === 0) {
+            handleGlobalNavSwipeEnd(e.clientX, e.clientY);
+          }
+        }}
+      >
         {/* Hidden File Inputs */}
         <input
           type="file"
@@ -1994,9 +2137,12 @@ export const App: React.FC = () => {
         )}
 
         {/* 3. SCREEN CONTENTS */}
-
-        {/* ====== SCREEN 1: CHATS (HOME) ====== */}
-        {activeScreen === 'home' && (() => {
+        <div 
+          key={activeScreen} 
+          className={`screen-transition-container screen-slide-${navTransitionDir}`}
+        >
+          {/* ====== SCREEN 1: CHATS (HOME) ====== */}
+          {activeScreen === 'home' && (() => {
           const hr = new Date().getHours();
           const greetingText = hr < 12 ? 'Good morning' : hr < 17 ? 'Good afternoon' : 'Good evening';
           const greetingEmoji = hr < 12 ? '☀️' : hr < 17 ? '🌤️' : '🌙';
@@ -3646,6 +3792,7 @@ export const App: React.FC = () => {
             </div>
           </section>
         )}
+        </div>
 
         {/* 4. SOLID POLISHED BOTTOM NAVIGATION BAR (5 PILLARS: CHATS, CALLS, FRIENDS, DISCOVER, PROFILE) */}
         {['home', 'calls', 'friends', 'discover', 'profile'].includes(activeScreen) && (
